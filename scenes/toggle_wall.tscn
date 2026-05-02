@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dp36b5hp6gr8s"]
+
+[ext_resource type="Script" uid="uid://6pa1ds21sfen" path="res://scripts/toggle_wall.gd" id="1_kwbpx"]
+
+[node name="toggle_wall" type="Area2D" unique_id=902223094]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_kwbpx")
+
+[node name="poly" type="Node2D" parent="." unique_id=1754823413]
+scale = Vector2(0.125, 0.125)
+
+[node name="Polygon2D" type="Polygon2D" parent="poly" unique_id=168955316]
+position = Vector2(32, 32)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(-224, -224, -224, -128, -128, -224)
+
+[node name="Polygon2D2" type="Polygon2D" parent="poly" unique_id=102156157]
+position = Vector2(-32, 32)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(224, -224, 224, -128, 128, -224)
+
+[node name="Polygon2D3" type="Polygon2D" parent="poly" unique_id=989823793]
+position = Vector2(32, -32)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(-224, 128, -224, 224, -128, 224)
+
+[node name="Polygon2D4" type="Polygon2D" parent="poly" unique_id=280114544]
+position = Vector2(-32, -32)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(224, 224, 224, 128, 128, 224)
+
+[node name="filler" type="Polygon2D" parent="." unique_id=2118907064]
+visible = false
+scale = Vector2(0.125, 0.125)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(-32, -192, -192, -32, -192, 32, -32, 192, 32, 192, 192, 32, 192, -32, 32, -192)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1296760534]
+visible = false
+scale = Vector2(0.75, 0.75)
+polygon = PackedVector2Array(32, -32, 32, 32, -32, 32, -32, -32)
+
+[node name="hitbox" type="StaticBody2D" parent="." unique_id=537551913 groups=["wall"]]
+process_mode = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hitbox" unique_id=1603790324]
+visible = false
+polygon = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

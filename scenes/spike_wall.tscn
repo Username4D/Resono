@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://chau4ur3q5u3f"]
+
+[ext_resource type="Script" uid="uid://cbj6adxxs3an" path="res://scripts/spike_wall.gd" id="1_ni36g"]
+[ext_resource type="Script" uid="uid://cqvqmqvy5hnmp" path="res://scripts/spike.gd" id="2_b3lej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wykyb"]
+size = Vector2(32, 32)
+
+[node name="spike_wall" type="StaticBody2D" unique_id=892489795 groups=["wall"]]
+script = ExtResource("1_ni36g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=385292501]
+visible = false
+shape = SubResource("RectangleShape2D_wykyb")
+
+[node name="poly" type="Node2D" parent="." unique_id=844817533]
+modulate = Color(0.11184334, 0.46991694, 0.42517605, 1)
+scale = Vector2(0.125, 0.125)
+
+[node name="Polygon2D" type="Polygon2D" parent="poly" unique_id=1943208467]
+polygon = PackedVector2Array(-128, -128, -96, -128, -96, -96, -128, -96)
+
+[node name="Polygon2D2" type="Polygon2D" parent="poly" unique_id=351439621]
+polygon = PackedVector2Array(-32, -128, -32, -96, 32, -96, 32, -128)
+
+[node name="Polygon2D3" type="Polygon2D" parent="poly" unique_id=704823504]
+polygon = PackedVector2Array(128, -128, 96, -128, 96, -96, 128, -96)
+
+[node name="poly2" type="Node2D" parent="." unique_id=96210632]
+modulate = Color(0.11184334, 0.46991694, 0.42517605, 1)
+position = Vector2(0, 4)
+scale = Vector2(0.125, 0.125)
+
+[node name="Polygon2D" type="Polygon2D" parent="poly2" unique_id=1647953839]
+polygon = PackedVector2Array(-128, -128, -96, -128, -96, -96, -128, -96)
+
+[node name="Polygon2D2" type="Polygon2D" parent="poly2" unique_id=154505076]
+polygon = PackedVector2Array(-32, -128, -32, -96, 32, -96, 32, -128)
+
+[node name="Polygon2D3" type="Polygon2D" parent="poly2" unique_id=852376885]
+polygon = PackedVector2Array(128, -128, 96, -128, 96, -96, 128, -96)
+
+[node name="Control" type="Control" parent="." unique_id=860827420]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 16.0
+offset_bottom = -16.0
+
+[node name="spike_poly" type="Polygon2D" parent="Control" unique_id=654888698]
+position = Vector2(16, 33.5)
+scale = Vector2(0.4, 0.4)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(-32, 32, 0, 0, 32, 32)
+
+[node name="spike" type="Area2D" parent="." unique_id=1439200983]
+visible = false
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_b3lej")
+
+[node name="hitbox" type="CollisionPolygon2D" parent="spike" unique_id=925027481]
+position = Vector2(0, 5.225)
+scale = Vector2(0.685, 0.685)
+polygon = PackedVector2Array(32, 32, -32, 32, 0, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="spike" unique_id=1523205591]
+
+[node name="hitbox" type="CollisionPolygon2D" parent="spike/StaticBody2D" unique_id=1779978185]
+position = Vector2(0, 8.96)
+scale = Vector2(0.495, 0.495)
+polygon = PackedVector2Array(32, 32, -32, 32, 0, 0)
+
+[node name="hitbox" type="Area2D" parent="." unique_id=143013782]
+
+[node name="hitbox" type="CollisionPolygon2D" parent="hitbox" unique_id=1052441032]
+position = Vector2(0, -16)
+scale = Vector2(0.395, 0.395)
+polygon = PackedVector2Array(-32, -32, -32, 0, 32, 0, 32, -32)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1800052688]
+position = Vector2(0, 4)
+scale = Vector2(0.5, 0.375)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(-32, 32, -32, -32, 32, -32, 32, 32)
+
+[connection signal="body_entered" from="spike" to="spike" method="_on_body_entered"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

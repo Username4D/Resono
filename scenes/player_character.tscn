@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cgacgxv3ork3d"]
+
+[ext_resource type="Script" uid="uid://cv8cbhg6qh1wf" path="res://scripts/player_character.gd" id="1_56udc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56udc"]
+size = Vector2(32, 32)
+
+[sub_resource type="Curve" id="Curve_56udc"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_6r27q"]
+curve = SubResource("Curve_56udc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kww55"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 12.08
+initial_velocity_max = 56.199997
+scale_max = 8.0
+scale_curve = SubResource("CurveTexture_6r27q")
+
+[node name="player_character" type="CharacterBody2D" unique_id=383526212 groups=["player"]]
+script = ExtResource("1_56udc")
+
+[node name="trail" type="Line2D" parent="." unique_id=1521260417]
+visible = false
+points = PackedVector2Array(0, 0, 0, 32, 0, 64, 0, 96)
+width = 14.0
+default_color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+joint_mode = 2
+end_cap_mode = 1
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1882373846]
+color = Color(0.2174713, 0.5438819, 0.507996, 1)
+polygon = PackedVector2Array(-12, -12, -12, 12, 12, 12, 12, -12)
+
+[node name="hitbox" type="CollisionShape2D" parent="." unique_id=1710504928]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_56udc")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=639964748]
+self_modulate = Color(0.11184334, 0.46991694, 0.42517605, 1)
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_kww55")
+
+[connection signal="death" from="." to="." method="_on_death"]

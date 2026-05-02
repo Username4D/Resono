@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c4thtwhmawpm8"]
+
+[ext_resource type="Script" uid="uid://l42rd0ywghyc" path="res://scripts/pulse_wall_emitter.gd" id="1_5hv70"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yr34"]
+size = Vector2(32, 32)
+
+[node name="pulse_wall_carrier" type="StaticBody2D" unique_id=1500950356 groups=["wall"]]
+script = ExtResource("1_5hv70")
+
+[node name="polygons" type="Node2D" parent="." unique_id=1292585802]
+position = Vector2(-8, -8)
+scale = Vector2(0.5, 0.5)
+
+[node name="b1" type="Polygon2D" parent="polygons" unique_id=474417023]
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="f1" type="Polygon2D" parent="polygons" unique_id=1467568072]
+position = Vector2(32, 0)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="f2" type="Polygon2D" parent="polygons" unique_id=158227755]
+position = Vector2(32, 32)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="b2" type="Polygon2D" parent="polygons" unique_id=1899889420]
+position = Vector2(0, 32)
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=361028672]
+visible = false
+shape = SubResource("RectangleShape2D_7yr34")
+
+[node name="direction_indicator" type="Polygon2D" parent="." unique_id=543842243]
+position = Vector2(-2.295, -6.83)
+scale = Vector2(0.28, 0.225)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 32, 32, 0, 64)

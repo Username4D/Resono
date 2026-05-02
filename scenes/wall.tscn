@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dggn0rjvlmo70"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_uvhfp"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wykyb"]
+size = Vector2(32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=892489795 groups=["wall"]]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=166236019]
+self_modulate = Color(0.11184334, 0.46991694, 0.42517605, 1)
+mesh = SubResource("QuadMesh_uvhfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=385292501]
+visible = false
+shape = SubResource("RectangleShape2D_wykyb")

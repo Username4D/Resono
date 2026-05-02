@@ -1,0 +1,18 @@
+[gd_resource type="TileSet" format=3 uid="uid://d3vh6ugew106t"]
+
+[ext_resource type="PackedScene" uid="uid://dggn0rjvlmo70" path="res://scenes/wall.tscn" id="1_ibj75"]
+[ext_resource type="PackedScene" uid="uid://c8nnp8qj54odx" path="res://scenes/spike.tscn" id="2_0qdcp"]
+[ext_resource type="PackedScene" uid="uid://ck3ni3jl3qe10" path="res://scenes/coin.tscn" id="3_pdbak"]
+[ext_resource type="PackedScene" uid="uid://chau4ur3q5u3f" path="res://scenes/spike_wall.tscn" id="4_cp03l"]
+[ext_resource type="PackedScene" uid="uid://dp36b5hp6gr8s" path="res://scenes/toggle_wall.tscn" id="5_ojc1d"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4ly7d"]
+scenes/1/scene = ExtResource("1_ibj75")
+scenes/2/scene = ExtResource("2_0qdcp")
+scenes/3/scene = ExtResource("3_pdbak")
+scenes/4/scene = ExtResource("4_cp03l")
+scenes/5/scene = ExtResource("5_ojc1d")
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetScenesCollectionSource_4ly7d")
