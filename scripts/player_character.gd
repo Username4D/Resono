@@ -6,6 +6,7 @@ const speed = 30
 signal move
 signal coin 
 signal death
+signal finish
 
 func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(custom_velocity)

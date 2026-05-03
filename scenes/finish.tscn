@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://di80s0xe24v6h"]
+
+[ext_resource type="Script" uid="uid://85r743015wkj" path="res://scripts/finish.gd" id="1_5nbog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rh00l"]
+size = Vector2(32, 32)
+
+[node name="finish" type="Area2D" unique_id=1384928228]
+script = ExtResource("1_5nbog")
+
+[node name="poly" type="Polygon2D" parent="." unique_id=379393430]
+scale = Vector2(0.6, 0.6)
+color = Color(0.2174713, 0.5438819, 0.507996, 1)
+polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+
+[node name="poly2" type="Polygon2D" parent="." unique_id=1817188317]
+rotation = 0.7853982
+scale = Vector2(0.6, 0.6)
+color = Color(0.2174713, 0.5438819, 0.507996, 1)
+polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+
+[node name="poly3" type="Polygon2D" parent="." unique_id=388876466]
+scale = Vector2(0.43, 0.43)
+color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+
+[node name="poly4" type="Polygon2D" parent="." unique_id=1002531094]
+rotation = 0.7853982
+scale = Vector2(0.43, 0.43)
+color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2101827068]
+shape = SubResource("RectangleShape2D_rh00l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
