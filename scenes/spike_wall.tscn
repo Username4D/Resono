@@ -75,6 +75,7 @@ polygon = PackedVector2Array(32, 32, -32, 32, 0, 0)
 [node name="hitbox" type="Area2D" parent="." unique_id=143013782]
 
 [node name="hitbox" type="CollisionPolygon2D" parent="hitbox" unique_id=1052441032]
+visible = false
 position = Vector2(0, -16)
 scale = Vector2(0.395, 0.395)
 polygon = PackedVector2Array(-32, -32, -32, 0, 32, 0, 32, -32)

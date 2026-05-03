@@ -42,5 +42,5 @@ shape = SubResource("RectangleShape2D_7yr34")
 [node name="direction_indicator" type="Polygon2D" parent="." unique_id=543842243]
 position = Vector2(-2.295, -6.83)
 scale = Vector2(0.28, 0.225)
-color = Color(1, 0, 0, 1)
+color = Color(0.62266326, 0.78247595, 0.7799469, 1)
 polygon = PackedVector2Array(0, 0, 32, 32, 0, 64)

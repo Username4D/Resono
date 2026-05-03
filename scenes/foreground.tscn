@@ -1,0 +1,716 @@
+[gd_scene format=3 uid="uid://5uqtjamsxgyw"]
+
+[ext_resource type="Script" uid="uid://okyca0qvabq6" path="res://scripts/foreground.gd" id="1_2gfar"]
+
+[node name="foreground" type="CanvasLayer" unique_id=313247467]
+follow_viewport_enabled = true
+script = ExtResource("1_2gfar")
+
+[node name="layer_1" type="Node2D" parent="." unique_id=1756137473]
+position = Vector2(8, 8)
+
+[node name="poly" type="Polygon2D" parent="layer_1" unique_id=1171113850]
+position = Vector2(16, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly2" type="Polygon2D" parent="layer_1" unique_id=287296401]
+position = Vector2(64, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly3" type="Polygon2D" parent="layer_1" unique_id=2036831240]
+position = Vector2(16, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly4" type="Polygon2D" parent="layer_1" unique_id=375920481]
+position = Vector2(1120, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly5" type="Polygon2D" parent="layer_1" unique_id=118534720]
+position = Vector2(1072, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly6" type="Polygon2D" parent="layer_1" unique_id=2100233531]
+position = Vector2(1024, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly7" type="Polygon2D" parent="layer_1" unique_id=837879964]
+position = Vector2(1072, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly8" type="Polygon2D" parent="layer_1" unique_id=721329660]
+position = Vector2(1120, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly9" type="Polygon2D" parent="layer_1" unique_id=486159170]
+position = Vector2(1120, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly10" type="Polygon2D" parent="layer_1" unique_id=1160786780]
+position = Vector2(1072, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly11" type="Polygon2D" parent="layer_1" unique_id=963779609]
+position = Vector2(1024, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly12" type="Polygon2D" parent="layer_1" unique_id=865650874]
+position = Vector2(976, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly13" type="Polygon2D" parent="layer_1" unique_id=1667419394]
+position = Vector2(1072, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly14" type="Polygon2D" parent="layer_1" unique_id=1737467815]
+position = Vector2(1120, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly15" type="Polygon2D" parent="layer_1" unique_id=356085942]
+position = Vector2(1120, 528)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly46" type="Polygon2D" parent="layer_1" unique_id=1689408901]
+position = Vector2(1168, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly47" type="Polygon2D" parent="layer_1" unique_id=1002980365]
+position = Vector2(1168, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly116" type="Polygon2D" parent="layer_1" unique_id=1949593974]
+position = Vector2(1120, 112)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly117" type="Polygon2D" parent="layer_1" unique_id=1687924301]
+position = Vector2(1168, 112)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly48" type="Polygon2D" parent="layer_1" unique_id=1485764450]
+position = Vector2(1168, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly49" type="Polygon2D" parent="layer_1" unique_id=576200200]
+position = Vector2(1168, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly50" type="Polygon2D" parent="layer_1" unique_id=1831808997]
+position = Vector2(1168, 528)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly51" type="Polygon2D" parent="layer_1" unique_id=65487904]
+position = Vector2(1216, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly52" type="Polygon2D" parent="layer_1" unique_id=1399459464]
+position = Vector2(1216, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly114" type="Polygon2D" parent="layer_1" unique_id=278607563]
+position = Vector2(1216, 112)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly115" type="Polygon2D" parent="layer_1" unique_id=1240884000]
+position = Vector2(1216, 160)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly53" type="Polygon2D" parent="layer_1" unique_id=1485107266]
+position = Vector2(1216, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly54" type="Polygon2D" parent="layer_1" unique_id=706545391]
+position = Vector2(1216, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly55" type="Polygon2D" parent="layer_1" unique_id=433883938]
+position = Vector2(1216, 528)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly109" type="Polygon2D" parent="layer_1" unique_id=1613645643]
+position = Vector2(1168, 480)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly110" type="Polygon2D" parent="layer_1" unique_id=367216754]
+position = Vector2(1216, 480)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly111" type="Polygon2D" parent="layer_1" unique_id=353281512]
+position = Vector2(1216, 432)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly112" type="Polygon2D" parent="layer_1" unique_id=56870905]
+position = Vector2(1216, 384)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly113" type="Polygon2D" parent="layer_1" unique_id=451008978]
+position = Vector2(1216, 336)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly16" type="Polygon2D" parent="layer_1" unique_id=91581832]
+position = Vector2(16, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly17" type="Polygon2D" parent="layer_1" unique_id=5679536]
+position = Vector2(16, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly18" type="Polygon2D" parent="layer_1" unique_id=1715759487]
+position = Vector2(16, 528)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly19" type="Polygon2D" parent="layer_1" unique_id=159106935]
+position = Vector2(16, 480)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly20" type="Polygon2D" parent="layer_1" unique_id=910497834]
+position = Vector2(64, 528)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly21" type="Polygon2D" parent="layer_1" unique_id=1001937711]
+position = Vector2(64, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly22" type="Polygon2D" parent="layer_1" unique_id=1424768055]
+position = Vector2(64, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly23" type="Polygon2D" parent="layer_1" unique_id=1502107829]
+position = Vector2(112, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly24" type="Polygon2D" parent="layer_1" unique_id=1347880707]
+position = Vector2(160, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly25" type="Polygon2D" parent="layer_1" unique_id=1083938414]
+position = Vector2(208, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly26" type="Polygon2D" parent="layer_1" unique_id=301892274]
+position = Vector2(112, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly27" type="Polygon2D" parent="layer_1" unique_id=1663086091]
+position = Vector2(16, 112)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly32" type="Polygon2D" parent="layer_1" unique_id=872632592]
+position = Vector2(-32, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly33" type="Polygon2D" parent="layer_1" unique_id=786161732]
+position = Vector2(-32, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly34" type="Polygon2D" parent="layer_1" unique_id=838674690]
+position = Vector2(-32, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly35" type="Polygon2D" parent="layer_1" unique_id=613651991]
+position = Vector2(-32, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly36" type="Polygon2D" parent="layer_1" unique_id=298249890]
+position = Vector2(-32, 528)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly37" type="Polygon2D" parent="layer_1" unique_id=1022808653]
+position = Vector2(-32, 480)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly38" type="Polygon2D" parent="layer_1" unique_id=17822207]
+position = Vector2(-32, 112)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly39" type="Polygon2D" parent="layer_1" unique_id=1881849494]
+position = Vector2(-80, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly40" type="Polygon2D" parent="layer_1" unique_id=762903538]
+position = Vector2(-80, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly41" type="Polygon2D" parent="layer_1" unique_id=1797276480]
+position = Vector2(-80, 624)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly56" type="Polygon2D" parent="layer_1" unique_id=1109260852]
+position = Vector2(1120, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly57" type="Polygon2D" parent="layer_1" unique_id=517745463]
+position = Vector2(1072, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly58" type="Polygon2D" parent="layer_1" unique_id=1311482893]
+position = Vector2(1024, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly59" type="Polygon2D" parent="layer_1" unique_id=1794039894]
+position = Vector2(976, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly60" type="Polygon2D" parent="layer_1" unique_id=605096430]
+position = Vector2(1168, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly61" type="Polygon2D" parent="layer_1" unique_id=179369400]
+position = Vector2(1216, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly62" type="Polygon2D" parent="layer_1" unique_id=634902093]
+position = Vector2(16, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly63" type="Polygon2D" parent="layer_1" unique_id=455672725]
+position = Vector2(64, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly64" type="Polygon2D" parent="layer_1" unique_id=1633097368]
+position = Vector2(112, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly65" type="Polygon2D" parent="layer_1" unique_id=1343342082]
+position = Vector2(160, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly66" type="Polygon2D" parent="layer_1" unique_id=793488087]
+position = Vector2(208, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly67" type="Polygon2D" parent="layer_1" unique_id=553233359]
+position = Vector2(-32, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly68" type="Polygon2D" parent="layer_1" unique_id=746315464]
+position = Vector2(-80, 672)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly69" type="Polygon2D" parent="layer_1" unique_id=576173157]
+position = Vector2(1120, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly70" type="Polygon2D" parent="layer_1" unique_id=1525936824]
+position = Vector2(1072, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly71" type="Polygon2D" parent="layer_1" unique_id=1570224881]
+position = Vector2(1024, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly72" type="Polygon2D" parent="layer_1" unique_id=1548726128]
+position = Vector2(976, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly73" type="Polygon2D" parent="layer_1" unique_id=1005626311]
+position = Vector2(1168, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly74" type="Polygon2D" parent="layer_1" unique_id=671842640]
+position = Vector2(1216, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly75" type="Polygon2D" parent="layer_1" unique_id=1269726097]
+position = Vector2(16, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly76" type="Polygon2D" parent="layer_1" unique_id=926948073]
+position = Vector2(64, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly77" type="Polygon2D" parent="layer_1" unique_id=1294123262]
+position = Vector2(112, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly78" type="Polygon2D" parent="layer_1" unique_id=2113857942]
+position = Vector2(160, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly79" type="Polygon2D" parent="layer_1" unique_id=1515083484]
+position = Vector2(208, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly80" type="Polygon2D" parent="layer_1" unique_id=351952240]
+position = Vector2(-32, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly81" type="Polygon2D" parent="layer_1" unique_id=571391445]
+position = Vector2(-80, 720)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly42" type="Polygon2D" parent="layer_1" unique_id=813709662]
+position = Vector2(-80, 576)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly43" type="Polygon2D" parent="layer_1" unique_id=1849409509]
+position = Vector2(-80, 528)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly44" type="Polygon2D" parent="layer_1" unique_id=1703880114]
+position = Vector2(-80, 480)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly106" type="Polygon2D" parent="layer_1" unique_id=1454712864]
+position = Vector2(-80, 480)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly107" type="Polygon2D" parent="layer_1" unique_id=107678360]
+position = Vector2(-32, 432)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly108" type="Polygon2D" parent="layer_1" unique_id=1897277228]
+position = Vector2(-80, 432)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly45" type="Polygon2D" parent="layer_1" unique_id=765295513]
+position = Vector2(-80, 112)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly104" type="Polygon2D" parent="layer_1" unique_id=1978768792]
+position = Vector2(-80, 160)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly105" type="Polygon2D" parent="layer_1" unique_id=709420841]
+position = Vector2(-80, 208)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly28" type="Polygon2D" parent="layer_1" unique_id=720340943]
+position = Vector2(64, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly29" type="Polygon2D" parent="layer_1" unique_id=19519972]
+position = Vector2(112, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly30" type="Polygon2D" parent="layer_1" unique_id=1710917496]
+position = Vector2(160, 16)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly82" type="Polygon2D" parent="layer_1" unique_id=1503637084]
+position = Vector2(16, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly83" type="Polygon2D" parent="layer_1" unique_id=866219942]
+position = Vector2(64, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly84" type="Polygon2D" parent="layer_1" unique_id=1433421547]
+position = Vector2(1120, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly85" type="Polygon2D" parent="layer_1" unique_id=453164660]
+position = Vector2(1072, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly86" type="Polygon2D" parent="layer_1" unique_id=1394801646]
+position = Vector2(1024, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly87" type="Polygon2D" parent="layer_1" unique_id=1105893313]
+position = Vector2(1168, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly88" type="Polygon2D" parent="layer_1" unique_id=39460993]
+position = Vector2(1216, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly89" type="Polygon2D" parent="layer_1" unique_id=265925201]
+position = Vector2(-32, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly90" type="Polygon2D" parent="layer_1" unique_id=1293961052]
+position = Vector2(-80, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly91" type="Polygon2D" parent="layer_1" unique_id=1254985836]
+position = Vector2(112, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly92" type="Polygon2D" parent="layer_1" unique_id=308504142]
+position = Vector2(160, -32)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly93" type="Polygon2D" parent="layer_1" unique_id=37314481]
+position = Vector2(16, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly94" type="Polygon2D" parent="layer_1" unique_id=648142431]
+position = Vector2(64, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly95" type="Polygon2D" parent="layer_1" unique_id=613180427]
+position = Vector2(1120, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly96" type="Polygon2D" parent="layer_1" unique_id=1071698906]
+position = Vector2(1072, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly97" type="Polygon2D" parent="layer_1" unique_id=1236381325]
+position = Vector2(1024, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly98" type="Polygon2D" parent="layer_1" unique_id=1565347983]
+position = Vector2(1168, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly99" type="Polygon2D" parent="layer_1" unique_id=453152376]
+position = Vector2(1216, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly100" type="Polygon2D" parent="layer_1" unique_id=398431802]
+position = Vector2(-32, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly101" type="Polygon2D" parent="layer_1" unique_id=1491216020]
+position = Vector2(-80, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly102" type="Polygon2D" parent="layer_1" unique_id=1621796666]
+position = Vector2(112, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly103" type="Polygon2D" parent="layer_1" unique_id=210184993]
+position = Vector2(160, -80)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="poly31" type="Polygon2D" parent="layer_1" unique_id=431316160]
+position = Vector2(112, 64)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-8, -8)
+polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=297783086]
+position = Vector2(576, 320)
+zoom = Vector2(0.885, 0.885)

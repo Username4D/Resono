@@ -13,6 +13,7 @@ color = Color(0.11184334, 0.46991694, 0.42517605, 1)
 polygon = PackedVector2Array(-32, 32, 0, 0, 32, 32)
 
 [node name="hitbox" type="CollisionPolygon2D" parent="." unique_id=925027481]
+visible = false
 position = Vector2(0, 5.225)
 scale = Vector2(0.685, 0.685)
 polygon = PackedVector2Array(32, 32, -32, 32, 0, 0)
@@ -20,6 +21,7 @@ polygon = PackedVector2Array(32, 32, -32, 32, 0, 0)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1523205591]
 
 [node name="hitbox" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1779978185]
+visible = false
 position = Vector2(0, 8.96)
 scale = Vector2(0.495, 0.495)
 polygon = PackedVector2Array(32, 32, -32, 32, 0, 0)

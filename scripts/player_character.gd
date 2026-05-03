@@ -3,6 +3,7 @@ extends CharacterBody2D
 var custom_velocity = Vector2.ZERO
 const speed = 30
 
+signal move
 signal coin 
 signal death
 
@@ -19,15 +20,19 @@ func _input(event: InputEvent) -> void:
 		if event.is_action_pressed("ui_up"):
 			custom_velocity.y = -speed
 			%hitbox.scale = Vector2(0.9,1)
+			move.emit()
 		if event.is_action_pressed("ui_down"):
 			custom_velocity.y = speed
 			%hitbox.scale = Vector2(0.9,1)
+			move.emit()
 		if event.is_action_pressed("ui_right"):
 			custom_velocity.x = speed
 			%hitbox.scale = Vector2(1,0.9)
+			move.emit()
 		if event.is_action_pressed("ui_left"):
 			custom_velocity.x = -speed
 			%hitbox.scale = Vector2(1,0.9)
+			move.emit()
 	
 
 func _on_death() -> void:

@@ -11,6 +11,7 @@ color = Color(0.2174713, 0.5438819, 0.507996, 1)
 polygon = PackedVector2Array(0, -32, -32, 0, 0, 32, 32, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1213254188]
+visible = false
 scale = Vector2(0.25, 0.25)
 polygon = PackedVector2Array(0, -32, -32, 0, 0, 32, 32, 0)
 
