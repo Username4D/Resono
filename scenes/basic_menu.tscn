@@ -1,0 +1,946 @@
+[gd_scene format=3 uid="uid://e5nnlc87fn4y"]
+
+[ext_resource type="Script" uid="uid://bxmme81vmlnew" path="res://scripts/basic_menu.gd" id="1_1hwr6"]
+
+[node name="basic_menu" type="CenterContainer" unique_id=1834566673]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_1hwr6")
+
+[node name="click_protect" type="ColorRect" parent="." unique_id=686989595]
+custom_minimum_size = Vector2(10000, 10000)
+layout_mode = 2
+color = Color(1, 1, 0.64705884, 0)
+
+[node name="menu" type="Control" parent="." unique_id=2050496603]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 2
+
+[node name="bg_polygons" type="Node2D" parent="menu" unique_id=712907860]
+unique_name_in_owner = true
+
+[node name="row" type="Node2D" parent="menu/bg_polygons" unique_id=1306939027]
+position = Vector2(32, 480)
+
+[node name="poly_up1" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=344448136]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up2" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=302326572]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up3" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1528406401]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up4" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1199913184]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up5" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1007340058]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up6" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=323221803]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up7" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=853938849]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up8" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1802463048]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_down1" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=830481820]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down2" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1129116509]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down3" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=861470790]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down4" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1661352117]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down5" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1260646387]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down6" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1625053089]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down7" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=1069292941]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down8" type="Polygon2D" parent="menu/bg_polygons/row" unique_id=15371927]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="row2" type="Node2D" parent="menu/bg_polygons" unique_id=1202230133]
+position = Vector2(32, 416)
+
+[node name="poly_up1" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=1594744220]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up2" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=1592802586]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up3" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=797188352]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up4" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=454517815]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up5" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=105477319]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up6" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=1697411680]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up7" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=267517333]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up8" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=14847482]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_down1" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=178594617]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down2" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=2145419653]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down3" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=1212758216]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down4" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=934229042]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down5" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=1536053941]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down6" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=1781336306]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down7" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=1929483284]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down8" type="Polygon2D" parent="menu/bg_polygons/row2" unique_id=1717449906]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="row3" type="Node2D" parent="menu/bg_polygons" unique_id=531426605]
+position = Vector2(32, 352)
+
+[node name="poly_up1" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1560928146]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up2" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1865775455]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up3" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=392077470]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up4" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=895722713]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up5" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1836589979]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up6" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=210109184]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up7" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1145791446]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up8" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1157218077]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_down1" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1094311852]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down2" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1540366792]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down3" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=111915113]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down4" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=659264638]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down5" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=661419183]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down6" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1438365983]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down7" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1466798660]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down8" type="Polygon2D" parent="menu/bg_polygons/row3" unique_id=1985868302]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="row4" type="Node2D" parent="menu/bg_polygons" unique_id=228961516]
+position = Vector2(32, 288)
+
+[node name="poly_up1" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=567771093]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up2" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=948982054]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up3" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=282869710]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up4" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=1332021821]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up5" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=1441692669]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up6" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=2044102193]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up7" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=1794060604]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up8" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=104470369]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_down1" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=1967287043]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down2" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=399011580]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down3" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=339991554]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down4" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=1702279751]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down5" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=1224566517]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down6" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=309379105]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down7" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=1538089224]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down8" type="Polygon2D" parent="menu/bg_polygons/row4" unique_id=132493259]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="row5" type="Node2D" parent="menu/bg_polygons" unique_id=1996770846]
+position = Vector2(32, 224)
+
+[node name="poly_up1" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=1645777835]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up2" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=1221534284]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up3" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=906296332]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up4" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=544724383]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up5" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=243402801]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up6" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=1942353655]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up7" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=67869501]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up8" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=1591431779]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_down1" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=1351315677]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down2" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=149426881]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down3" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=1019395916]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down4" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=56959448]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down5" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=568271097]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down6" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=2106381027]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down7" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=440593362]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down8" type="Polygon2D" parent="menu/bg_polygons/row5" unique_id=1494689728]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="row6" type="Node2D" parent="menu/bg_polygons" unique_id=1369758]
+position = Vector2(32, 160)
+
+[node name="poly_up1" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=1701026238]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up2" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=1045532716]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up3" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=689846187]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up4" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=1502090333]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up5" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=898451800]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up6" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=1182795669]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up7" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=555389307]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up8" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=2123191457]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_down1" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=775401874]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down2" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=1944328872]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down3" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=975595767]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down4" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=1146922246]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down5" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=1979927591]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down6" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=2119691926]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down7" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=599484148]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down8" type="Polygon2D" parent="menu/bg_polygons/row6" unique_id=796045609]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="row7" type="Node2D" parent="menu/bg_polygons" unique_id=338777940]
+position = Vector2(32, 96)
+
+[node name="poly_up1" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=1051287775]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up2" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=1717116029]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up3" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=602127880]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up4" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=705367238]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up5" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=2074850595]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up6" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=294138912]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up7" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=1561693116]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up8" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=404310512]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_down1" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=185970028]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down2" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=249703162]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down3" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=329482352]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down4" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=424634997]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down5" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=210587856]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down6" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=1860007167]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down7" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=290139990]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down8" type="Polygon2D" parent="menu/bg_polygons/row7" unique_id=1048512722]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="row8" type="Node2D" parent="menu/bg_polygons" unique_id=1722597207]
+position = Vector2(32, 32)
+
+[node name="poly_up1" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1991389906]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up2" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=520685503]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up3" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1961105215]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up4" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1879797515]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up5" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=646668608]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up6" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=650444268]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up7" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=223348985]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_up8" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1172556061]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(0, 0, 0, 64, 64, 0)
+
+[node name="poly_down1" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1616466212]
+visible = false
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down2" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1429065684]
+visible = false
+position = Vector2(64, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down3" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=784860809]
+visible = false
+position = Vector2(128, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down4" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1749103133]
+visible = false
+position = Vector2(192, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down5" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=955603924]
+visible = false
+position = Vector2(256, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down6" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1444734340]
+visible = false
+position = Vector2(320, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down7" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1929510872]
+visible = false
+position = Vector2(384, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="poly_down8" type="Polygon2D" parent="menu/bg_polygons/row8" unique_id=1976503475]
+visible = false
+position = Vector2(448, 0)
+color = Color(0, 0.36492407, 0.31314182, 1)
+offset = Vector2(-32, -32)
+polygon = PackedVector2Array(64, 64, 0, 64, 64, 0)
+
+[node name="content" type="Control" parent="menu" unique_id=1466627907]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="menu/content" unique_id=1189213363]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 28.0
+offset_right = 480.0
+offset_bottom = 476.0
+color = Color(0.40018412, 0.6863339, 0.6570848, 1)
