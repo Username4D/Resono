@@ -4,11 +4,13 @@ var custom_velocity = Vector2.ZERO
 const speed = 30
 var state = "alive" # alive, dead, finished
 
+var start_position = Vector2.ZERO
 
 signal move
 signal coin 
 signal death
 signal finish
+signal respawn
 
 func _physics_process(delta: float) -> void:
 	if state == "alive":
@@ -48,7 +50,17 @@ func _on_death() -> void:
 	$Polygon2D.visible = false
 	$trail.visible = false
 	$GPUParticles2D.emitting = true
+	await get_tree().create_timer(2).timeout
+	respawn.emit()
+	self.position = start_position
+	$Polygon2D.visible = true
+	custom_velocity = Vector2.ZERO
+	state = "alive"
+	%hitbox.scale = Vector2.ONE
 
 
 func _on_finish() -> void:
 	state = "finished"
+
+func _ready() -> void:
+	start_position = position

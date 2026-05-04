@@ -14,3 +14,8 @@ func _on_body_entered(body: Node2D) -> void:
 			$filler.visible = true
 			await get_tree().process_frame
 		$filler.scale = Vector2(0.125, 0.125)
+
+func respawn():
+	$hitbox.process_mode = Node.PROCESS_MODE_DISABLED
+	$filler.visible = false
+	used = false

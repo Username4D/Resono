@@ -12,4 +12,8 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 			await get_tree().process_frame
 		$spike.position.y = -32
 		$Control/spike_poly.position.y = 1.5
-		
+
+func respawn():
+	used = false
+	$spike.position.y = 0
+	$Control/spike_poly.position.y = 33.5
