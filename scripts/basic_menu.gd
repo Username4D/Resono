@@ -14,6 +14,7 @@ func animation_open():
 	if ongoing: return
 	if open: return
 	self.visible = true
+	print(self.visible)
 	animation_open_start.emit()
 	ongoing = true
 	for i in %bg_polygons.get_children():
@@ -65,7 +66,3 @@ func _ready() -> void:
 			if randi_range(0,1) == 1:
 				i.get_node("poly_up%d" % [n]).rotation_degrees += 90
 				i.get_node("poly_down%d" % [n]).rotation_degrees += 90
-	await get_tree().create_timer(1).timeout
-	animation_open()
-	await get_tree().create_timer(4).timeout
-	animation_close()

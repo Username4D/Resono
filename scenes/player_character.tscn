@@ -49,3 +49,4 @@ explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_kww55")
 
 [connection signal="death" from="." to="." method="_on_death"]
+[connection signal="finish" from="." to="." method="_on_finish"]
