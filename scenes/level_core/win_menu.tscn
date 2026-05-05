@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://j5208q5bwle0"]
 
-[ext_resource type="PackedScene" uid="uid://e5nnlc87fn4y" path="res://scenes/basic_menu.tscn" id="1_ki55t"]
+[ext_resource type="PackedScene" uid="uid://e5nnlc87fn4y" path="res://scenes/ui_elements/basic_menu.tscn" id="1_ki55t"]
 [ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_jx1is"]
 
 [sub_resource type="FontVariation" id="FontVariation_jx1is"]

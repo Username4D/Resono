@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cqemx5jm854vs"]
+
+[ext_resource type="Script" uid="uid://cww2rgs46k74x" path="res://scripts/level_selection_menu.gd" id="1_yjof2"]
+[ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="2_27fpk"]
+[ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="3_8rbul"]
+[ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/smooth_scroll_container.gd" id="4_b2om3"]
+[ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="5_vu8m7"]
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="6_amq84"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkuva"]
+
+[sub_resource type="Resource" id="Resource_5pvln"]
+script = ExtResource("5_vu8m7")
+
+[sub_resource type="Resource" id="Resource_xdblq"]
+script = ExtResource("5_vu8m7")
+
+[sub_resource type="FontVariation" id="FontVariation_5pvln"]
+base_font = ExtResource("6_amq84")
+variation_opentype = {
+2003265652: 400
+}
+spacing_glyph = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_xdblq"]
+font = SubResource("FontVariation_5pvln")
+font_size = 47
+
+[node name="level_selection_menu" type="Control" unique_id=2000219653]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yjof2")
+
+[node name="foreground" parent="." unique_id=313247467 instance=ExtResource("2_27fpk")]
+
+[node name="background" parent="." unique_id=1883299904 instance=ExtResource("3_8rbul")]
+layer = -1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1325307697]
+layout_mode = 0
+offset_top = 288.0
+offset_right = 1152.0
+offset_bottom = 384.0
+theme_override_colors/scroll_hint_vertical_color = Color(0, 0, 0, 0)
+theme_override_colors/scroll_hint_horizontal_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jkuva")
+horizontal_scroll_mode = 3
+script = ExtResource("4_b2om3")
+wheel_scroll_damper = SubResource("Resource_5pvln")
+dragging_scroll_damper = SubResource("Resource_xdblq")
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="buttons" type="HBoxContainer" parent="ScrollContainer" unique_id=1427682100]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 64
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="levels_label" type="Label" parent="." unique_id=1725974157]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 1152.0
+offset_bottom = 289.0
+mouse_filter = 1
+text = "Levels:"
+label_settings = SubResource("LabelSettings_xdblq")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true

@@ -1,0 +1,54 @@
+[gd_scene format=4 uid="uid://bq057n81cvw62"]
+
+[ext_resource type="Script" uid="uid://dwbgl0rgm1k6o" path="res://scripts/level_scene_preset.gd" id="1_lgsbt"]
+[ext_resource type="TileSet" uid="uid://d3vh6ugew106t" path="res://resources/map_tilesset.tres" id="2_wrwlp"]
+[ext_resource type="PackedScene" uid="uid://cgacgxv3ork3d" path="res://scenes/level_core/player_character.tscn" id="3_b7gc2"]
+[ext_resource type="PackedScene" uid="uid://j5208q5bwle0" path="res://scenes/level_core/win_menu.tscn" id="6_2hcv1"]
+[ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="7_bpfl3"]
+[ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="8_u1j71"]
+
+[node name="level_scene" type="Control" unique_id=961452960]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lgsbt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=693159025]
+position = Vector2(576, 324)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1444176587]
+position = Vector2(32, 4)
+color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+polygon = PackedVector2Array(288, 64, 288, 576, 800, 576, 800, 64)
+
+[node name="level" type="TileMapLayer" parent="." unique_id=1438167536]
+position = Vector2(0, 4)
+tile_map_data = PackedByteArray("AAAMAAIAAAAAAAAAAQANAAIAAAAAAAAAAQAOAAIAAAAAAAAAAQAPAAIAAAAAAAAAAQAQAAIAAAAAAAAAAQARAAIAAAAAAAAAAQASAAIAAAAAAAAAAQATAAIAAAAAAAAAAQAUAAIAAAAAAAAAAQAVAAIAAAAAAAAAAQAWAAIAAAAAAAAAAQAXAAIAAAAAAAAAAQAYAAIAAAAAAAAAAQAZAAIAAAAAAAAAAQAZAAMAAAAAAAAAAQAZAAQAAAAAAAAAAQAZAAUAAAAAAAAAAQAZAAYAAAAAAAAAAQAZAAcAAAAAAAAAAQAZAAgAAAAAAAAAAQAZAAkAAAAAAAAAAQAKAAkAAAAAAAAAAQAKAAoAAAAAAAAAAQAKAAsAAAAAAAAAAQAKAA0AAAAAAAAAAQAKABEAAAAAAAAAAQALABEAAAAAAAAAAQAMABEAAAAAAAAAAQANABEAAAAAAAAAAQAOABEAAAAAAAAAAQAPABEAAAAAAAAAAQAQABEAAAAAAAAAAQARABEAAAAAAAAAAQASABEAAAAAAAAAAQATABEAAAAAAAAAAQAUABEAAAAAAAAAAQAVABEAAAAAAAAAAQAWABEAAAAAAAAAAQAXABEAAAAAAAAAAQAYABEAAAAAAAAAAQAZABEAAAAAAAAAAQAZAAoAAAAAAAAAAQAZAAsAAAAAAAAAAQAZAA0AAAAAAAAAAQAZAA4AAAAAAAAAAQAZAA8AAAAAAAAAAQAZABAAAAAAAAAAAQAKAAgAAAAAAAAAAQAKAAcAAAAAAAAAAQAKAAYAAAAAAAAAAQAKAAUAAAAAAAAAAQAKAAQAAAAAAAAAAQAKAAMAAAAAAAAAAQAKAAIAAAAAAAAAAQALAAIAAAAAAAAAAQAKAA8AAAAAAAAAAQAKABAAAAAAAAAAAQAKAA4AAAAAAAAAAQAKAAwAAAAAAAAAAQAZAAwAAAAAAAAAAQA=")
+tile_set = ExtResource("2_wrwlp")
+
+[node name="player_character" parent="." unique_id=383526212 instance=ExtResource("3_b7gc2")]
+position = Vector2(368, 112)
+
+[node name="pulse_walls" type="Node2D" parent="." unique_id=373582771]
+position = Vector2(784, 400)
+
+[node name="win_menu" parent="." unique_id=1834566673 instance=ExtResource("6_2hcv1")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="foreground" parent="." unique_id=313247467 instance=ExtResource("7_bpfl3")]
+
+[node name="background" parent="." unique_id=7355374 instance=ExtResource("8_u1j71")]
+layer = -1
+
+[connection signal="finish" from="player_character" to="." method="_on_player_character_finish"]

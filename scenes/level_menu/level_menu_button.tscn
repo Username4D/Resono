@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://1ts6e8ujwmnx"]
+
+[ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="1_mdkli"]
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_nbjep"]
+[ext_resource type="Script" uid="uid://dxu3jjhv1vo3w" path="res://scripts/level_menu_button.gd" id="2_ngtly"]
+
+[sub_resource type="FontVariation" id="FontVariation_ngtly"]
+base_font = ExtResource("2_nbjep")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wqvpk"]
+font = SubResource("FontVariation_ngtly")
+font_size = 30
+font_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+
+[node name="Button" type="Button" unique_id=1485768686]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+size_flags_vertical = 4
+theme = ExtResource("1_mdkli")
+script = ExtResource("2_ngtly")
+
+[node name="poly_1" type="Polygon2D" parent="." unique_id=713422384]
+show_behind_parent = true
+color = Color(0, 0.36492407, 0.31314182, 1)
+polygon = PackedVector2Array(0, 0, 64, 64, 0, 64)
+
+[node name="poly_2" type="Polygon2D" parent="." unique_id=1947169525]
+show_behind_parent = true
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(0, 0, 64, 64, 64, 0)
+
+[node name="Label" type="Label" parent="." unique_id=1240181610]
+layout_mode = 0
+offset_top = -5.5
+offset_right = 64.0
+offset_bottom = 58.499985
+text = "23"
+label_settings = SubResource("LabelSettings_wqvpk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="." unique_id=351644418]
+points = PackedVector2Array(64, 32, 128, 32)
+width = 4.0
+default_color = Color(0, 0.36492407, 0.31314182, 1)

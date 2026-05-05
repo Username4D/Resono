@@ -712,5 +712,6 @@ offset = Vector2(-8, -8)
 polygon = PackedVector2Array(-16, -16, -16, 32, 32, -16)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=297783086]
+visible = false
 position = Vector2(576, 320)
 zoom = Vector2(0.885, 0.885)

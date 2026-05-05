@@ -1,0 +1,66 @@
+[gd_scene format=4 uid="uid://j4bxbojm50b8"]
+
+[ext_resource type="PackedScene" uid="uid://bq057n81cvw62" path="res://scenes/level_core/level_scene_preset.tscn" id="1_mpdjq"]
+[ext_resource type="PackedScene" uid="uid://c4thtwhmawpm8" path="res://scenes/tiles/pulse_wall_emitter.tscn" id="2_mx7cr"]
+[ext_resource type="PackedScene" uid="uid://dod5ad5u0ixvj" path="res://scenes/tiles/pulse_wall_carrier.tscn" id="3_afygv"]
+
+[node name="level_scene" unique_id=961452960 instance=ExtResource("1_mpdjq")]
+
+[node name="level" parent="." index="2" unique_id=1438167536]
+tile_map_data = PackedByteArray("AAAMAAIAAAAAAAAAAQANAAIAAAAAAAAAAQAOAAIAAAAAAAAAAQAPAAIAAAAAAAAAAQAQAAIAAAAAAAAAAQARAAIAAAAAAAAAAQASAAIAAAAAAAAAAQATAAIAAAAAAAAAAQAUAAIAAAAAAAAAAQAVAAIAAAAAAAAAAQAWAAIAAAAAAAAAAQAXAAIAAAAAAAAAAQAYAAIAAAAAAAAAAQAZAAIAAAAAAAAAAQAZAAMAAAAAAAAABGAZAAQAAAAAAAAABGAZAAUAAAAAAAAABGAZAAYAAAAAAAAABGAZAAcAAAAAAAAABGAZAAgAAAAAAAAABGAZAAkAAAAAAAAABGAKAAkAAAAAAAAABFAKAAoAAAAAAAAABFAKAAsAAAAAAAAABFAKAA0AAAAAAAAABFAKABEAAAAAAAAAAQALABEAAAAAAAAABAAMABEAAAAAAAAABAANABEAAAAAAAAABAAOABEAAAAAAAAABAAPABEAAAAAAAAABAAQABEAAAAAAAAABAARABEAAAAAAAAABAASABEAAAAAAAAABAATABEAAAAAAAAABAAUABEAAAAAAAAABAAVABEAAAAAAAAABAAWABEAAAAAAAAABAAXABEAAAAAAAAABAAYABEAAAAAAAAABAAZABEAAAAAAAAAAQAZAAoAAAAAAAAABGAZAAsAAAAAAAAABGAZAA0AAAAAAAAABGAZAA4AAAAAAAAABGAZAA8AAAAAAAAABGAZABAAAAAAAAAABGAKAAgAAAAAAAAABFAKAAcAAAAAAAAABFAKAAYAAAAAAAAABFAKAAUAAAAAAAAABFAKAAQAAAAAAAAABFAKAAMAAAAAAAAAAQAKAAIAAAAAAAAAAQALAAIAAAAAAAAAAQAKAA8AAAAAAAAABFAKABAAAAAAAAAABFAKAA4AAAAAAAAABFAKAAwAAAAAAAAABFAZAAwAAAAAAAAABGARAAMAAAAAAAAAAQASAAMAAAAAAAAABgA=")
+
+[node name="pulse_wall_carrier" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="0" unique_id=1500950356 instance=ExtResource("2_mx7cr")]
+position = Vector2(-416, 0)
+
+[node name="pulse_wall_carrier2" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="1" unique_id=496637269 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-384, 0)
+input = NodePath("../pulse_wall_carrier")
+
+[node name="pulse_wall_carrier3" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="2" unique_id=1068409568 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-352, 0)
+input = NodePath("../pulse_wall_carrier2")
+
+[node name="pulse_wall_carrier4" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="3" unique_id=1090705067 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-320, 0)
+input = NodePath("../pulse_wall_carrier3")
+
+[node name="pulse_wall_carrier5" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="4" unique_id=1232873570 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-288, 0)
+input = NodePath("../pulse_wall_carrier4")
+
+[node name="pulse_wall_carrier6" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="5" unique_id=10999312 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-256, 0)
+input = NodePath("../pulse_wall_carrier5")
+
+[node name="pulse_wall_carrier7" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="6" unique_id=972512436 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-224, 0)
+input = NodePath("../pulse_wall_carrier6")
+
+[node name="pulse_wall_carrier8" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="7" unique_id=1346619354 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-192, 0)
+input = NodePath("../pulse_wall_carrier7")
+
+[node name="pulse_wall_carrier9" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="8" unique_id=1638672963 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-160, 0)
+input = NodePath("../pulse_wall_carrier8")
+
+[node name="pulse_wall_carrier10" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="9" unique_id=1211417961 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-128, 0)
+input = NodePath("../pulse_wall_carrier9")
+
+[node name="pulse_wall_carrier11" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="10" unique_id=1139493440 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-96, 0)
+input = NodePath("../pulse_wall_carrier10")
+
+[node name="pulse_wall_carrier12" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="11" unique_id=51568109 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-64, 0)
+input = NodePath("../pulse_wall_carrier11")
+
+[node name="pulse_wall_carrier13" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="12" unique_id=1342386934 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+position = Vector2(-32, 0)
+input = NodePath("../pulse_wall_carrier12")
+
+[node name="pulse_wall_carrier14" parent="pulse_walls" parent_id_path=PackedInt32Array(373582771) index="13" unique_id=256730910 node_paths=PackedStringArray("input") instance=ExtResource("3_afygv")]
+input = NodePath("../pulse_wall_carrier13")
+
+[connection signal="body_entered" from="level/finish" to="level/finish" method="_on_body_entered"]

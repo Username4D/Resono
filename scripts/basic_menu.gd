@@ -27,9 +27,9 @@ func animation_open():
 			n.visible = true
 			await get_tree().create_timer(0.001).timeout
 	await get_tree().create_timer(0.1).timeout
-	var timer = get_tree().create_timer(2)
+	var timer = get_tree().create_timer(1)
 	while timer.time_left != 0:
-		%content.size.y = (1 - ease(timer.time_left / 2, 6)) * 512
+		%content.size.y = (1 - timer.time_left) * 512
 		await get_tree().process_frame
 	ongoing = false
 	open = true
