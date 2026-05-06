@@ -13,6 +13,10 @@ config_version=5
 config/name="Nirvana"
 config/features=PackedStringArray("4.6")
 
+[autoload]
+
+ui_transition_handler="*uid://blat3evgk3n5m"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/SmoothScroll/plugin.cfg", "res://addons/gdterm/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")

@@ -1,0 +1,6 @@
+extends Node
+
+signal transition_start
+signal transition_mid_point
+signal transition_continue
+signal transition_end
