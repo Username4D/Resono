@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bk055dmf6hucr"]
 
 [ext_resource type="Script" uid="uid://cnlwryqob1how" path="res://scripts/view.gd" id="1_pkj76"]
-[ext_resource type="PackedScene" uid="uid://cqemx5jm854vs" path="res://scenes/level_menu/level_selection_menu.tscn" id="2_y7rjl"]
+[ext_resource type="PackedScene" uid="uid://cevdmx6cognmt" path="res://scenes/ui_elements/main_menu.tscn" id="2_y7rjl"]
 
 [node name="view" type="Control" unique_id=652785082]
 layout_mode = 3
@@ -1489,5 +1489,5 @@ color = Color(0, 0, 0, 1)
 offset = Vector2(-64, -32)
 polygon = PackedVector2Array(16, -16, 16, 80, 112, -16)
 
-[node name="level_selection_menu" parent="." unique_id=2000219653 instance=ExtResource("2_y7rjl")]
+[node name="main_menu" parent="." unique_id=1057641390 instance=ExtResource("2_y7rjl")]
 layout_mode = 1

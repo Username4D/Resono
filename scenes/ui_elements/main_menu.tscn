@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://cevdmx6cognmt"]
+
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="1_3ilp2"]
+[ext_resource type="Script" uid="uid://cawbjv8i7je1s" path="res://scripts/main_menu.gd" id="1_6cp6s"]
+[ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="2_ftgjd"]
+[ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="3_6cp6s"]
+[ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="4_ftgjd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hw0fn"]
+font = ExtResource("1_3ilp2")
+font_size = 127
+
+[sub_resource type="FontVariation" id="FontVariation_6cp6s"]
+base_font = ExtResource("1_3ilp2")
+variation_opentype = {
+2003265652: 800
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_iyafn"]
+font = SubResource("FontVariation_6cp6s")
+font_size = 36
+font_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+
+[node name="main_menu" type="Control" unique_id=1057641390]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6cp6s")
+
+[node name="Label" type="Label" parent="." unique_id=1736236543]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 1152.0
+offset_bottom = 266.0
+text = "RESONO."
+label_settings = SubResource("LabelSettings_hw0fn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="foreground" parent="." unique_id=313247467 instance=ExtResource("2_ftgjd")]
+
+[node name="background" parent="." unique_id=1131950046 instance=ExtResource("3_6cp6s")]
+layer = -2
+
+[node name="levels_button" type="Button" parent="." unique_id=884606351]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 480.0
+offset_top = 288.0
+offset_right = 640.0
+offset_bottom = 448.0
+theme = ExtResource("4_ftgjd")
+
+[node name="Polygon2D" type="Polygon2D" parent="levels_button" unique_id=212072620]
+show_behind_parent = true
+color = Color(0.2174713, 0.5438819, 0.507996, 1)
+polygon = PackedVector2Array(0, 0, 0, 160, 160, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="levels_button" unique_id=652088257]
+show_behind_parent = true
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(160, 160, 0, 160, 160, 0)
+
+[node name="Label3" type="Label" parent="levels_button" unique_id=1911144089]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 160.0
+text = "Levels"
+label_settings = SubResource("LabelSettings_iyafn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="settings_button" type="Button" parent="." unique_id=1674298581]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 736.0
+offset_top = 288.0
+offset_right = 896.0
+offset_bottom = 448.0
+theme = ExtResource("4_ftgjd")
+
+[node name="Polygon2D" type="Polygon2D" parent="settings_button" unique_id=458492645]
+show_behind_parent = true
+color = Color(0.2174713, 0.5438819, 0.507996, 1)
+polygon = PackedVector2Array(0, 0, 0, 160, 160, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="settings_button" unique_id=593376032]
+show_behind_parent = true
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(160, 160, 0, 160, 160, 0)
+
+[node name="Label3" type="Label" parent="settings_button" unique_id=959920936]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 160.0
+text = "Settings"
+label_settings = SubResource("LabelSettings_iyafn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="colors_button" type="Button" parent="." unique_id=433752990]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 224.0
+offset_top = 288.0
+offset_right = 384.0
+offset_bottom = 448.0
+theme = ExtResource("4_ftgjd")
+
+[node name="Polygon2D" type="Polygon2D" parent="colors_button" unique_id=1720545810]
+show_behind_parent = true
+color = Color(0.2174713, 0.5438819, 0.507996, 1)
+polygon = PackedVector2Array(0, 0, 0, 160, 160, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="colors_button" unique_id=1080823703]
+show_behind_parent = true
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(160, 160, 0, 160, 160, 0)
+
+[node name="Label3" type="Label" parent="colors_button" unique_id=942081415]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 160.0
+text = "Colors"
+label_settings = SubResource("LabelSettings_iyafn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1689656158]
+position = Vector2(576, 324)
+
+[connection signal="pressed" from="levels_button" to="." method="_on_levels_button_pressed"]
+[connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="colors_button" to="." method="_on_colors_button_pressed"]
