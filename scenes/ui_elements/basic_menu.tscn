@@ -2,8 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bxmme81vmlnew" path="res://scripts/basic_menu.gd" id="1_1hwr6"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_diddb"]
+bg_color = Color(0.0027596126, 0.29205465, 0.2606747, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.8, 0.8, 0.8, 0)
+
 [node name="basic_menu" type="CenterContainer" unique_id=1834566673]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -937,10 +944,11 @@ anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 
-[node name="ColorRect" type="ColorRect" parent="menu/content" unique_id=1189213363]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 28.0
-offset_right = 480.0
-offset_bottom = 476.0
-color = Color(0.40018412, 0.6863339, 0.6570848, 1)
+[node name="Panel" type="Panel" parent="menu/content" unique_id=434267325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_diddb")

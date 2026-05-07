@@ -66,3 +66,7 @@ func _ready() -> void:
 			if randi_range(0,1) == 1:
 				i.get_node("poly_up%d" % [n]).rotation_degrees += 90
 				i.get_node("poly_down%d" % [n]).rotation_degrees += 90
+	post_ready()
+
+func post_ready():
+	pass

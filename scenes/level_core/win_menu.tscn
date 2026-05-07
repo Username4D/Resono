@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://j5208q5bwle0"]
 
 [ext_resource type="PackedScene" uid="uid://e5nnlc87fn4y" path="res://scenes/ui_elements/basic_menu.tscn" id="1_ki55t"]
+[ext_resource type="Script" uid="uid://srg20da2vfpl" path="res://scenes/level_core/win_menu.gd" id="2_7v0cb"]
 [ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_jx1is"]
+[ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="3_ajxxn"]
 
 [sub_resource type="FontVariation" id="FontVariation_jx1is"]
 base_font = ExtResource("2_jx1is")
@@ -14,16 +16,22 @@ font = SubResource("FontVariation_jx1is")
 font_size = 40
 font_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_jhtc2"]
+font = SubResource("FontVariation_jx1is")
+font_size = 22
+font_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+
 [node name="basic_menu" unique_id=1834566673 instance=ExtResource("1_ki55t")]
-visible = true
+script = ExtResource("2_7v0cb")
 
 [node name="click_protect" parent="." index="0" unique_id=686989595]
 custom_minimum_size = Vector2(1152, 648)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="1" unique_id=2039544416]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = 28.0
+offset_right = 512.0
+offset_bottom = 166.0
 
 [node name="ColorRect2" type="ColorRect" parent="menu/content/VBoxContainer" index="0" unique_id=1147408169]
 custom_minimum_size = Vector2(288, 64)
@@ -34,13 +42,82 @@ color = Color(1, 1, 1, 0)
 [node name="Label" type="Label" parent="menu/content/VBoxContainer" index="1" unique_id=1191660589]
 custom_minimum_size = Vector2(512, 64)
 layout_mode = 2
-text = "LEVEL COMPLETED"
+text = "Level completed"
 label_settings = SubResource("LabelSettings_ki55t")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="menu/content/VBoxContainer" index="2" unique_id=1520804251]
-custom_minimum_size = Vector2(288, 6)
+custom_minimum_size = Vector2(288, 2)
 layout_mode = 2
 size_flags_horizontal = 4
 color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+
+[node name="coins" type="Label" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="2" unique_id=570254041]
+custom_minimum_size = Vector2(512, 64)
+layout_mode = 0
+offset_top = 156.0
+offset_right = 512.0
+offset_bottom = 220.0
+text = "16 Coins"
+label_settings = SubResource("LabelSettings_jhtc2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="menu_button" type="Button" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="3" unique_id=1529169029]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 128.0
+offset_top = 284.0
+offset_right = 224.0
+offset_bottom = 380.0
+theme = ExtResource("3_ajxxn")
+
+[node name="Polygon2D" type="Polygon2D" parent="menu/content/menu_button" index="0" unique_id=2139707257]
+show_behind_parent = true
+color = Color(0.2174713, 0.5438819, 0.507996, 1)
+polygon = PackedVector2Array(0, 0, 0, 96, 96, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="menu/content/menu_button" index="1" unique_id=1594902843]
+show_behind_parent = true
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(96, 96, 0, 96, 96, 0)
+
+[node name="Label3" type="Label" parent="menu/content/menu_button" index="2" unique_id=456257871]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+text = "Menu"
+label_settings = SubResource("LabelSettings_jhtc2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="next_button" type="Button" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="4" unique_id=104343204]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 288.0
+offset_top = 284.0
+offset_right = 384.0
+offset_bottom = 380.0
+theme = ExtResource("3_ajxxn")
+
+[node name="Polygon2D" type="Polygon2D" parent="menu/content/next_button" index="0" unique_id=224573284]
+show_behind_parent = true
+color = Color(0.2174713, 0.5438819, 0.507996, 1)
+polygon = PackedVector2Array(0, 0, 0, 96, 96, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="menu/content/next_button" index="1" unique_id=539475399]
+show_behind_parent = true
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+polygon = PackedVector2Array(96, 96, 0, 96, 96, 0)
+
+[node name="Label3" type="Label" parent="menu/content/next_button" index="2" unique_id=1624181406]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+text = "Next"
+label_settings = SubResource("LabelSettings_jhtc2")
+horizontal_alignment = 1
+vertical_alignment = 1

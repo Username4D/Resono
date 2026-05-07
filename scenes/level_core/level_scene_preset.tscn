@@ -52,3 +52,5 @@ grow_vertical = 1
 layer = -1
 
 [connection signal="finish" from="player_character" to="." method="_on_player_character_finish"]
+[connection signal="menu" from="win_menu" to="." method="_on_win_menu_menu"]
+[connection signal="next" from="win_menu" to="." method="_on_win_menu_next"]
