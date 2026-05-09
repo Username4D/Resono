@@ -1,7 +1,64 @@
 [gd_scene format=3 uid="uid://bdliq0ok8sjpr"]
 
+[ext_resource type="Script" uid="uid://bpu4wsr0gj40c" path="res://scripts/settings.gd" id="1_b76fu"]
 [ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="1_wl5cd"]
 [ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="2_gi2t1"]
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="3_gi2t1"]
+[ext_resource type="Texture2D" uid="uid://bqnxf8dobvbek" path="res://resources/assets/check_svg.svg" id="4_wf5rr"]
+
+[sub_resource type="FontVariation" id="FontVariation_5pvln"]
+base_font = ExtResource("3_gi2t1")
+variation_opentype = {
+2003265652: 400
+}
+spacing_glyph = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_wf5rr"]
+font = SubResource("FontVariation_5pvln")
+font_size = 47
+
+[sub_resource type="LabelSettings" id="LabelSettings_b76fu"]
+font = ExtResource("3_gi2t1")
+font_size = 24
+
+[sub_resource type="DPITexture" id="DPITexture_gi2t1"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wf5rr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi2t1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0.36492407, 0.31314182, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b76fu"]
+bg_color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x56oh"]
+bg_color = Color(1.6845763e-07, 0.34798253, 0.2982892, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuudw"]
+bg_color = Color(0, 0.36492407, 0.31314182, 1)
+
+[sub_resource type="MeshTexture" id="MeshTexture_l6wpa"]
 
 [node name="settings" type="Control" unique_id=1646497997]
 layout_mode = 3
@@ -10,6 +67,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_b76fu")
 
 [node name="background" parent="." unique_id=313247467 instance=ExtResource("1_wl5cd")]
 
@@ -17,3 +75,109 @@ grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1686048036]
 position = Vector2(576, 324)
+
+[node name="levels_label" type="Label" parent="." unique_id=1480196299]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 1152.0
+offset_bottom = 193.0
+mouse_filter = 1
+text = "Settings:"
+label_settings = SubResource("LabelSettings_wf5rr")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=441269659]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 192.0
+offset_right = 800.0
+offset_bottom = 480.0
+
+[node name="sfx_volume" type="Control" parent="HBoxContainer" unique_id=798594929]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/sfx_volume" unique_id=1557251757]
+layout_mode = 0
+offset_right = 224.0
+offset_bottom = 64.0
+text = "SFX volume"
+label_settings = SubResource("LabelSettings_b76fu")
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer/sfx_volume" unique_id=1391977110]
+layout_mode = 0
+offset_left = 224.0
+offset_right = 448.0
+offset_bottom = 64.0
+theme_override_icons/grabber = SubResource("DPITexture_gi2t1")
+theme_override_icons/grabber_highlight = SubResource("DPITexture_gi2t1")
+theme_override_icons/grabber_disabled = SubResource("DPITexture_gi2t1")
+theme_override_icons/tick = SubResource("DPITexture_gi2t1")
+theme_override_styles/slider = SubResource("StyleBoxFlat_wf5rr")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gi2t1")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_gi2t1")
+max_value = 10.0
+value = 8.0
+
+[node name="music_volume" type="Control" parent="HBoxContainer" unique_id=2120549933]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/music_volume" unique_id=441504964]
+layout_mode = 0
+offset_right = 224.0
+offset_bottom = 64.0
+text = "Music volume"
+label_settings = SubResource("LabelSettings_b76fu")
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer/music_volume" unique_id=1179094669]
+layout_mode = 0
+offset_left = 224.0
+offset_right = 448.0
+offset_bottom = 64.0
+theme_override_icons/grabber = SubResource("DPITexture_gi2t1")
+theme_override_icons/grabber_highlight = SubResource("DPITexture_gi2t1")
+theme_override_icons/grabber_disabled = SubResource("DPITexture_gi2t1")
+theme_override_icons/tick = SubResource("DPITexture_gi2t1")
+theme_override_styles/slider = SubResource("StyleBoxFlat_wf5rr")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gi2t1")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_gi2t1")
+max_value = 10.0
+value = 8.0
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=739789081]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Control" unique_id=739959168]
+layout_mode = 0
+offset_right = 224.0
+offset_bottom = 64.0
+text = "Enable particles"
+label_settings = SubResource("LabelSettings_b76fu")
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/Control" unique_id=120855554]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 16.0
+offset_right = 384.0
+offset_bottom = 80.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxFlat_b76fu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x56oh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tuudw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_b76fu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_b76fu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_b76fu")
+theme_override_icons/checked = ExtResource("4_wf5rr")
+theme_override_icons/unchecked = SubResource("MeshTexture_l6wpa")
+
+[connection signal="value_changed" from="HBoxContainer/sfx_volume/HSlider" to="." method="save" unbinds=1]
+[connection signal="value_changed" from="HBoxContainer/music_volume/HSlider" to="." method="save" unbinds=1]
+[connection signal="button_up" from="HBoxContainer/Control/CheckBox" to="." method="save"]
+[connection signal="toggled" from="HBoxContainer/Control/CheckBox" to="." method="save" unbinds=1]

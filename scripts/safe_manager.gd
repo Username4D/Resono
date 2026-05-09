@@ -11,9 +11,13 @@ func load_savefile():
 		settings = content["settings"]
 		level_coins = content["level_coins"]
 		unlocked_levels = content["unlocked_levels"]
+		AudioServer.set_bus_volume_db(1 ,linear_to_db(settings["sfx_volume"] / 10))
+		AudioServer.set_bus_volume_db(2 ,linear_to_db(settings["music_volume"] / 10))
 	else:
 		save_savefile()
 func save_savefile():
+	AudioServer.set_bus_volume_db(1 ,linear_to_db(settings["sfx_volume"] / 10))
+	AudioServer.set_bus_volume_db(2 ,linear_to_db(settings["music_volume"] / 10))
 	var content = {
 		"settings": settings,
 		"level_coins": level_coins,

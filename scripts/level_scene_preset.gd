@@ -20,8 +20,12 @@ func _process(delta: float) -> void:
 		$foreground.offset = ($player_character.position - Vector2(get_viewport().size) / 2) * 0.1
 
 func _on_player_character_finish() -> void:
+	if level >= safe_manager.unlocked_levels:
+		safe_manager.unlocked_levels = level + 1
+	if safe_manager.level_coins[level - 1] < coins:
+		safe_manager.level_coins[level - 1] = coins
+	safe_manager.save_savefile()
 	await get_tree().create_timer(1).timeout
-	print("lol")
 	$win_menu.animation_open()
 
 func _on_win_menu_menu() -> void:

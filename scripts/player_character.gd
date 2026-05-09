@@ -41,8 +41,6 @@ func _input(event: InputEvent) -> void:
 			custom_velocity.x = -speed
 			%hitbox.scale = Vector2(1,0.5)
 			move.emit()
-	
-
 func _on_death() -> void:
 	state = "dead"
 	print(custom_velocity)
@@ -58,10 +56,9 @@ func _on_death() -> void:
 	custom_velocity = Vector2.ZERO
 	state = "alive"
 	%hitbox.scale = Vector2.ONE
-
-
 func _on_finish() -> void:
 	state = "finished"
-
 func _ready() -> void:
 	start_position = position
+	if !safe_manager.settings["particles_enabled"]:
+		$GPUParticles2D.visible = false
