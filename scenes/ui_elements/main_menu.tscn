@@ -103,7 +103,7 @@ label_settings = SubResource("LabelSettings_iyafn")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="colors_button" type="Button" parent="." unique_id=433752990]
+[node name="credits_button" type="Button" parent="." unique_id=433752990]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 224.0
@@ -112,22 +112,22 @@ offset_right = 384.0
 offset_bottom = 448.0
 theme = ExtResource("4_ftgjd")
 
-[node name="Polygon2D" type="Polygon2D" parent="colors_button" unique_id=1720545810]
+[node name="Polygon2D" type="Polygon2D" parent="credits_button" unique_id=1720545810]
 show_behind_parent = true
 color = Color(0.2174713, 0.5438819, 0.507996, 1)
 polygon = PackedVector2Array(0, 0, 0, 160, 160, 0)
 
-[node name="Polygon2D2" type="Polygon2D" parent="colors_button" unique_id=1080823703]
+[node name="Polygon2D2" type="Polygon2D" parent="credits_button" unique_id=1080823703]
 show_behind_parent = true
 color = Color(0.11184334, 0.46991694, 0.42517605, 1)
 polygon = PackedVector2Array(160, 160, 0, 160, 160, 0)
 
-[node name="Label3" type="Label" parent="colors_button" unique_id=942081415]
+[node name="Label3" type="Label" parent="credits_button" unique_id=942081415]
 show_behind_parent = true
 layout_mode = 0
 offset_right = 160.0
 offset_bottom = 160.0
-text = "Colors"
+text = "Credits"
 label_settings = SubResource("LabelSettings_iyafn")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -137,4 +137,4 @@ position = Vector2(576, 324)
 
 [connection signal="pressed" from="levels_button" to="." method="_on_levels_button_pressed"]
 [connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="colors_button" to="." method="_on_colors_button_pressed"]
+[connection signal="pressed" from="credits_button" to="." method="_on_colors_button_pressed"]

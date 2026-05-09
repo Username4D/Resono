@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bdliq0ok8sjpr"]
+
+[ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="1_wl5cd"]
+[ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="2_gi2t1"]
+
+[node name="settings" type="Control" unique_id=1646497997]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" parent="." unique_id=313247467 instance=ExtResource("1_wl5cd")]
+
+[node name="foreground" parent="." unique_id=1607321744 instance=ExtResource("2_gi2t1")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1686048036]
+position = Vector2(576, 324)

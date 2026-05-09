@@ -1,10 +1,11 @@
 extends Control
 
-const level_amount = 2
+const level_amount = 20
 var level_button = preload("res://scenes/level_menu/level_menu_button.tscn")
 var unlocked_levels = 2
 
 func _ready() -> void:
+	unlocked_levels = safe_manager.unlocked_levels
 	for i in range(0, level_amount):
 		var o = level_button.instantiate()
 		o.level_id = i + 1

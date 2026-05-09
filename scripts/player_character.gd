@@ -20,7 +20,8 @@ func _physics_process(delta: float) -> void:
 				%hitbox.scale = Vector2.ONE
 				custom_velocity = Vector2.ZERO
 				print("wall")
-
+			if collision.get_collider().is_in_group("break_wall"):
+				collision.get_collider().break_wall()
 func _input(event: InputEvent) -> void:
 	if custom_velocity == Vector2.ZERO:
 		if state != "alive": return

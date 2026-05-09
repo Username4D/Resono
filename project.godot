@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6")
 [autoload]
 
 ui_transition_handler="*uid://blat3evgk3n5m"
+safe_manager="*uid://ck1me73dunjtw"
 
 [editor_plugins]
 
@@ -35,6 +36,7 @@ folder_colors={
 
 player=""
 wall=""
+breakable_wall=""
 
 [rendering]
 

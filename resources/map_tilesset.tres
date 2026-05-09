@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://chau4ur3q5u3f" path="res://scenes/tiles/spike_wall.tscn" id="4_he2lf"]
 [ext_resource type="PackedScene" uid="uid://dp36b5hp6gr8s" path="res://scenes/tiles/toggle_wall.tscn" id="5_wmnip"]
 [ext_resource type="PackedScene" uid="uid://di80s0xe24v6h" path="res://scenes/tiles/finish.tscn" id="6_nxaet"]
+[ext_resource type="PackedScene" uid="uid://s7yyxnywujcd" path="res://scenes/tiles/breakable_wall.tscn" id="7_ghrop"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4ly7d"]
 scenes/1/scene = ExtResource("1_nxaet")
@@ -14,6 +15,7 @@ scenes/3/scene = ExtResource("3_pdbak")
 scenes/4/scene = ExtResource("4_he2lf")
 scenes/5/scene = ExtResource("5_wmnip")
 scenes/6/scene = ExtResource("6_nxaet")
+scenes/7/scene = ExtResource("7_ghrop")
 
 [resource]
 tile_size = Vector2i(32, 32)
