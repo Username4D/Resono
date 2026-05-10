@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://7h5thumxrpll"]
+
+[ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="1_q2xmd"]
+[ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="2_moafe"]
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="3_k5jna"]
+[ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="4_b6x1s"]
+[ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/smooth_scroll_container.gd" id="4_k5jna"]
+[ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="5_b6x1s"]
+
+[sub_resource type="FontVariation" id="FontVariation_5pvln"]
+base_font = ExtResource("3_k5jna")
+variation_opentype = {
+2003265652: 400
+}
+spacing_glyph = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_kmy7t"]
+font = SubResource("FontVariation_5pvln")
+font_size = 47
+
+[sub_resource type="Resource" id="Resource_tkhsp"]
+script = ExtResource("5_b6x1s")
+
+[sub_resource type="Resource" id="Resource_nsa52"]
+script = ExtResource("5_b6x1s")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5gbqx"]
+font = ExtResource("3_k5jna")
+font_size = 18
+
+[node name="credits" type="Control" unique_id=1968842900]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="foreground" parent="." unique_id=313247467 instance=ExtResource("1_q2xmd")]
+
+[node name="background" parent="." unique_id=1508215379 instance=ExtResource("2_moafe")]
+layer = -2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1972478732]
+position = Vector2(576, 324)
+
+[node name="credits_label" type="Label" parent="." unique_id=672996845]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 1152.0
+offset_bottom = 193.0
+mouse_filter = 1
+text = "Credits:"
+label_settings = SubResource("LabelSettings_kmy7t")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="SmoothScrollContainer" type="ScrollContainer" parent="." unique_id=74318805]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 192.0
+offset_right = 768.0
+offset_bottom = 512.0
+theme = ExtResource("4_b6x1s")
+theme_override_constants/scrollbar_h_separation = 4
+script = ExtResource("4_k5jna")
+wheel_scroll_damper = SubResource("Resource_tkhsp")
+dragging_scroll_damper = SubResource("Resource_nsa52")
+allow_horizontal_scroll = false
+hide_scrollbar_over_time = true
+scrollbar_hide_time = 0.0
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="Label" type="Label" parent="SmoothScrollContainer" unique_id=1262728954]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+text = "Godot Engine:
+https://godotengine.org/license/
+
+Font License:
+Copyright 2017 The Playfair Display Project Authors (https://github.com/clauseggers/Playfair-Display), with Reserved Font Name \"Playfair Display\"
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+PREAMBLE
+
+The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded, redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.
+DEFINITIONS
+
+\"Font Software\" refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.
+
+\"Reserved Font Name\" refers to any names specified as such after the copyright statement(s).
+\"Original Version\" refers to the collection of Font Software components as distributed by the Copyright Holder(s).
+
+\"Modified Version\" refers to any derivative made by adding to, deleting, or substituting -- in part or in whole -- any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.
+
+\"Author\" refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.
+PERMISSION & CONDITIONS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:
+
+    Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.
+    Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.
+    No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.
+    The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.
+    The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.
+
+TERMINATION
+
+This license becomes null and void if any of the above conditions are not met.
+DISCLAIMER
+
+THE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE. "
+label_settings = SubResource("LabelSettings_5gbqx")
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true

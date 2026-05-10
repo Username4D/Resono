@@ -3,11 +3,10 @@
 [ext_resource type="Script" uid="uid://cww2rgs46k74x" path="res://scripts/level_selection_menu.gd" id="1_yjof2"]
 [ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="2_27fpk"]
 [ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="3_8rbul"]
+[ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="4_27fpk"]
 [ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/smooth_scroll_container.gd" id="4_b2om3"]
 [ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="5_vu8m7"]
 [ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="6_amq84"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkuva"]
 
 [sub_resource type="Resource" id="Resource_5pvln"]
 script = ExtResource("5_vu8m7")
@@ -46,13 +45,14 @@ offset_left = 32.0
 offset_top = 288.0
 offset_right = 1120.0
 offset_bottom = 384.0
-theme_override_colors/scroll_hint_vertical_color = Color(0, 0, 0, 0)
-theme_override_colors/scroll_hint_horizontal_color = Color(0, 0, 0, 0)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jkuva")
-horizontal_scroll_mode = 3
+theme = ExtResource("4_27fpk")
+theme_override_constants/scrollbar_v_separation = 4
 script = ExtResource("4_b2om3")
 wheel_scroll_damper = SubResource("Resource_5pvln")
 dragging_scroll_damper = SubResource("Resource_xdblq")
+allow_vertical_scroll = false
+hide_scrollbar_over_time = true
+scrollbar_hide_time = 0.0
 metadata/_custom_type_script = "uid://bgqglerkcylxx"
 
 [node name="buttons" type="HBoxContainer" parent="ScrollContainer" unique_id=1427682100]
