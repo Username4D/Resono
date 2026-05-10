@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://7h5thumxrpll"]
 
+[ext_resource type="Script" uid="uid://cotnhnup3gq7g" path="res://scripts/credits.gd" id="1_nsa52"]
 [ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="1_q2xmd"]
 [ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="2_moafe"]
 [ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="3_k5jna"]
 [ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="4_b6x1s"]
 [ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/smooth_scroll_container.gd" id="4_k5jna"]
 [ext_resource type="Script" uid="uid://b7h0k2h2qwlqv" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="5_b6x1s"]
+[ext_resource type="PackedScene" uid="uid://c77x1pk5qy3gl" path="res://scenes/ui_elements/back_button.tscn" id="7_tkhsp"]
 
 [sub_resource type="FontVariation" id="FontVariation_5pvln"]
 base_font = ExtResource("3_k5jna")
@@ -35,6 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nsa52")
 
 [node name="foreground" parent="." unique_id=313247467 instance=ExtResource("1_q2xmd")]
 
@@ -120,3 +123,7 @@ label_settings = SubResource("LabelSettings_5gbqx")
 horizontal_alignment = 1
 autowrap_mode = 2
 metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="back_button" parent="." unique_id=322792245 instance=ExtResource("7_tkhsp")]
+
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

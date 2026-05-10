@@ -1,24 +1,25 @@
 [gd_scene format=3 uid="uid://bdliq0ok8sjpr"]
 
-[ext_resource type="Script" uid="uid://bpu4wsr0gj40c" path="res://scripts/settings.gd" id="1_b76fu"]
-[ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="1_wl5cd"]
-[ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="2_gi2t1"]
-[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="3_gi2t1"]
-[ext_resource type="Texture2D" uid="uid://bqnxf8dobvbek" path="res://resources/assets/check_svg.svg" id="4_wf5rr"]
+[ext_resource type="Script" uid="uid://bpu4wsr0gj40c" path="res://scripts/settings.gd" id="1_ijxus"]
+[ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="2_21aae"]
+[ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="3_g3pud"]
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="4_q3ecd"]
+[ext_resource type="Texture2D" uid="uid://bqnxf8dobvbek" path="res://resources/assets/check_svg.svg" id="5_00oib"]
+[ext_resource type="PackedScene" uid="uid://c77x1pk5qy3gl" path="res://scenes/ui_elements/back_button.tscn" id="6_qiktq"]
 
-[sub_resource type="FontVariation" id="FontVariation_5pvln"]
-base_font = ExtResource("3_gi2t1")
+[sub_resource type="FontVariation" id="FontVariation_b2oo1"]
+base_font = ExtResource("4_q3ecd")
 variation_opentype = {
 2003265652: 400
 }
 spacing_glyph = 3
 
 [sub_resource type="LabelSettings" id="LabelSettings_wf5rr"]
-font = SubResource("FontVariation_5pvln")
+font = SubResource("FontVariation_b2oo1")
 font_size = 47
 
 [sub_resource type="LabelSettings" id="LabelSettings_b76fu"]
-font = ExtResource("3_gi2t1")
+font = ExtResource("4_q3ecd")
 font_size = 24
 
 [sub_resource type="DPITexture" id="DPITexture_gi2t1"]
@@ -67,11 +68,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_b76fu")
+script = ExtResource("1_ijxus")
 
-[node name="background" parent="." unique_id=313247467 instance=ExtResource("1_wl5cd")]
+[node name="background" parent="." unique_id=313247467 instance=ExtResource("2_21aae")]
 
-[node name="foreground" parent="." unique_id=1607321744 instance=ExtResource("2_gi2t1")]
+[node name="foreground" parent="." unique_id=1607321744 instance=ExtResource("3_g3pud")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1686048036]
 position = Vector2(576, 324)
@@ -174,10 +175,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_tuudw")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_b76fu")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_b76fu")
 theme_override_styles/focus = SubResource("StyleBoxFlat_b76fu")
-theme_override_icons/checked = ExtResource("4_wf5rr")
+theme_override_icons/checked = ExtResource("5_00oib")
 theme_override_icons/unchecked = SubResource("MeshTexture_l6wpa")
+
+[node name="back_button" parent="." unique_id=319162283 instance=ExtResource("6_qiktq")]
 
 [connection signal="value_changed" from="HBoxContainer/sfx_volume/HSlider" to="." method="save" unbinds=1]
 [connection signal="value_changed" from="HBoxContainer/music_volume/HSlider" to="." method="save" unbinds=1]
 [connection signal="button_up" from="HBoxContainer/Control/CheckBox" to="." method="save"]
 [connection signal="toggled" from="HBoxContainer/Control/CheckBox" to="." method="save" unbinds=1]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

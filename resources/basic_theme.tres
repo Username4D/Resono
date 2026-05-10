@@ -9,6 +9,24 @@ bg_color = Color(1, 1, 1, 0.105882354)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5yh0"]
 bg_color = Color(1, 1, 1, 0.23529412)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_go0ya"]
+bg_color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcqsl"]
+bg_color = Color(0.08679358, 0.3844919, 0.34517688, 1)
+corner_radius_bottom_right = 64
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rcky"]
+bg_color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+corner_radius_bottom_right = 64
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldbgw"]
+bg_color = Color(0, 0.36492407, 0.31314182, 1)
+corner_radius_bottom_right = 64
+corner_detail = 1
+
 [sub_resource type="ImageTexture" id="ImageTexture_gx0wr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk3b5"]
@@ -101,6 +119,11 @@ Button/styles/focus = SubResource("StyleBoxFlat_gx0wr")
 Button/styles/hover = SubResource("StyleBoxFlat_cfm7t")
 Button/styles/normal = SubResource("StyleBoxFlat_gx0wr")
 Button/styles/pressed = SubResource("StyleBoxFlat_q5yh0")
+FlatButton/base_type = &"Button"
+FlatButton/styles/disabled = SubResource("StyleBoxFlat_go0ya")
+FlatButton/styles/hover = SubResource("StyleBoxFlat_gcqsl")
+FlatButton/styles/normal = SubResource("StyleBoxFlat_3rcky")
+FlatButton/styles/pressed = SubResource("StyleBoxFlat_ldbgw")
 HScrollBar/icons/decrement = SubResource("ImageTexture_gx0wr")
 HScrollBar/icons/decrement_highlight = SubResource("ImageTexture_gx0wr")
 HScrollBar/icons/decrement_pressed = SubResource("ImageTexture_gx0wr")

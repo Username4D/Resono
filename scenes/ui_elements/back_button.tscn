@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c77x1pk5qy3gl"]
+
+[ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="1_hllrc"]
+[ext_resource type="Script" uid="uid://bibnliywsu4u7" path="res://scripts/back_button.gd" id="1_sx032"]
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_sx032"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bilj8"]
+font = ExtResource("2_sx032")
+font_size = 20
+
+[node name="back_button" type="CanvasLayer" unique_id=322792245]
+layer = 2
+script = ExtResource("1_sx032")
+
+[node name="Button" type="Button" parent="." unique_id=148478559]
+unique_name_in_owner = true
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 232.0
+offset_bottom = 104.0
+theme = ExtResource("1_hllrc")
+theme_type_variation = &"FlatButton"
+
+[node name="Label" type="Label" parent="." unique_id=602555248]
+offset_left = 40.0
+offset_top = 39.665
+offset_right = 160.0
+offset_bottom = 103.66499
+text = "back"
+label_settings = SubResource("LabelSettings_bilj8")
+horizontal_alignment = 1
+vertical_alignment = 1

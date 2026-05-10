@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgacgxv3ork3d" path="res://scenes/level_core/player_character.tscn" id="3_b7gc2"]
 [ext_resource type="PackedScene" uid="uid://j5208q5bwle0" path="res://scenes/level_core/win_menu.tscn" id="6_2hcv1"]
 [ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="7_bpfl3"]
+[ext_resource type="PackedScene" uid="uid://c77x1pk5qy3gl" path="res://scenes/ui_elements/back_button.tscn" id="7_q4nt3"]
 [ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="8_u1j71"]
 
 [node name="level_scene" type="Control" unique_id=961452960]
@@ -51,6 +52,9 @@ grow_vertical = 1
 [node name="background" parent="." unique_id=7355374 instance=ExtResource("8_u1j71")]
 layer = -1
 
+[node name="back_button" parent="." unique_id=322792245 instance=ExtResource("7_q4nt3")]
+
 [connection signal="finish" from="player_character" to="." method="_on_player_character_finish"]
 [connection signal="menu" from="win_menu" to="." method="_on_win_menu_menu"]
 [connection signal="next" from="win_menu" to="." method="_on_win_menu_next"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
