@@ -34,6 +34,7 @@ func _on_win_menu_menu() -> void:
 	var next_level = await load("res://scenes/level_menu/level_selection_menu.tscn").instantiate()
 	self.get_parent().add_child(next_level)
 	await get_tree().process_frame
+	audio_handler.break_toggled = false
 	ui_transition_handler.transition_continue.emit()
 	self.queue_free()
 

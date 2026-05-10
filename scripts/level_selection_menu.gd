@@ -22,5 +22,6 @@ func load_level(x):
 	var new_scene = await load("res://scenes/levels/%d.tscn" % [x]).instantiate()
 	self.get_parent().add_child(new_scene)
 	await get_tree().process_frame
+	audio_handler.break_toggled = true
 	ui_transition_handler.transition_continue.emit()
 	self.queue_free()

@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6")
 
 ui_transition_handler="*uid://blat3evgk3n5m"
 safe_manager="*uid://ck1me73dunjtw"
+audio_handler="*uid://jcgyntc18axc"
 
 [editor_plugins]
 
