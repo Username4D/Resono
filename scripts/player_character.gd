@@ -5,12 +5,13 @@ const speed = 30
 var state = "alive" # alive, dead, finished
 
 var start_position = Vector2.ZERO
-
+@export var finish_position = Vector2.ZERO
 signal move
 signal coin 
 signal death
 signal finish
 signal respawn
+signal update_velocity(ve)
 
 func _physics_process(delta: float) -> void:
 	if state == "alive":
@@ -29,18 +30,22 @@ func _input(event: InputEvent) -> void:
 			custom_velocity.y = -speed
 			%hitbox.scale = Vector2(0.5,1)
 			move.emit()
+			update_velocity.emit(Vector2(0, -1))
 		if event.is_action_pressed("ui_down"):
 			custom_velocity.y = speed
 			%hitbox.scale = Vector2(0.5,1)
 			move.emit()
+			update_velocity.emit(Vector2(0, 1))
 		if event.is_action_pressed("ui_right"):
 			custom_velocity.x = speed
 			%hitbox.scale = Vector2(1,0.5)
 			move.emit()
+			update_velocity.emit(Vector2(1,0))
 		if event.is_action_pressed("ui_left"):
 			custom_velocity.x = -speed
 			%hitbox.scale = Vector2(1,0.5)
 			move.emit()
+			update_velocity.emit(Vector2(-1, 0))
 func _on_death() -> void:
 	state = "dead"
 	print(custom_velocity)
@@ -58,6 +63,7 @@ func _on_death() -> void:
 	%hitbox.scale = Vector2.ONE
 func _on_finish() -> void:
 	state = "finished"
+	position = finish_position
 func _ready() -> void:
 	start_position = position
 	if !safe_manager.settings["particles_enabled"]:

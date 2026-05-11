@@ -8,13 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c77x1pk5qy3gl" path="res://scenes/ui_elements/back_button.tscn" id="7_q4nt3"]
 [ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="8_u1j71"]
 
-[node name="level_scene" type="Control" unique_id=961452960]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="level_scene" type="Node2D" unique_id=1114278186]
 script = ExtResource("1_lgsbt")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=693159025]
@@ -31,14 +25,13 @@ tile_map_data = PackedByteArray("AAAMAAIAAAAAAAAAAQANAAIAAAAAAAAAAQAOAAIAAAAAAAA
 tile_set = ExtResource("2_wrwlp")
 
 [node name="player_character" parent="." unique_id=383526212 instance=ExtResource("3_b7gc2")]
-position = Vector2(368, 112)
+position = Vector2(368, 116)
 
 [node name="pulse_walls" type="Node2D" parent="." unique_id=373582771]
 position = Vector2(784, 400)
 
 [node name="win_menu" parent="." unique_id=1834566673 instance=ExtResource("6_2hcv1")]
 visible = false
-layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0

@@ -1,7 +1,9 @@
-extends Control
+extends Node2D
 
 @export var level = 0
 var coins = 0
+
+
 
 func _ready() -> void:
 	if $player_character and $foreground:
@@ -14,7 +16,8 @@ func _ready() -> void:
 		print(i.name)
 		if i.has_method("respawn"):
 			$player_character.respawn.connect(i.respawn)
-
+		if i.has_method("update_velocity"):
+			$player_character.update_velocity.connect(i.update_velocity)
 func _process(delta: float) -> void:
 	if $player_character and $foreground:
 		$foreground.offset = ($player_character.position - Vector2(get_viewport().size) / 2) * 0.1
