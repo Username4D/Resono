@@ -48,6 +48,8 @@ layer = -1
 [node name="back_button" parent="." unique_id=322792245 instance=ExtResource("7_q4nt3")]
 
 [connection signal="finish" from="player_character" to="." method="_on_player_character_finish"]
+[connection signal="respawn" from="player_character" to="." method="_on_player_character_respawn"]
 [connection signal="menu" from="win_menu" to="." method="_on_win_menu_menu"]
 [connection signal="next" from="win_menu" to="." method="_on_win_menu_next"]
+[connection signal="retry" from="win_menu" to="." method="_on_win_menu_retry"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

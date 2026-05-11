@@ -1,0 +1,83 @@
+[gd_scene format=4 uid="uid://b030wyit04c2c"]
+
+[ext_resource type="PackedScene" uid="uid://bq057n81cvw62" path="res://scenes/level_core/level_scene_preset.tscn" id="1_hj0qt"]
+[ext_resource type="PackedScene" uid="uid://dod5ad5u0ixvj" path="res://scenes/tiles/pulse_wall_carrier.tscn" id="2_h2fyb"]
+[ext_resource type="PackedScene" uid="uid://c4thtwhmawpm8" path="res://scenes/tiles/pulse_wall_emitter.tscn" id="3_3tdmx"]
+
+[node name="level_scene" unique_id=961452960 instance=ExtResource("1_hj0qt")]
+level = 20
+
+[node name="level" parent="." index="2" unique_id=1438167536]
+tile_map_data = PackedByteArray("AAAMAAIAAAAAAAAAAQANAAIAAAAAAAAABDAOAAIAAAAAAAAABDAPAAIAAAAAAAAABDAQAAIAAAAAAAAABDARAAIAAAAAAAAABDASAAIAAAAAAAAAAQATAAIAAAAAAAAAAQAUAAIAAAAAAAAAAQAVAAIAAAAAAAAAAQAWAAIAAAAAAAAAAQAXAAIAAAAAAAAAAQAYAAIAAAAAAAAAAQAZAAIAAAAAAAAAAQAZAAMAAAAAAAAAAQAZAAQAAAAAAAAAAQAZAAUAAAAAAAAAAQAZAAYAAAAAAAAAAQAZAAcAAAAAAAAAAQAZAAgAAAAAAAAAAQAZAAkAAAAAAAAAAQAKAAkAAAAAAAAAAQAKAAoAAAAAAAAAAQAKAAsAAAAAAAAABFAKAA0AAAAAAAAABFAKABEAAAAAAAAAAQALABEAAAAAAAAABAAMABEAAAAAAAAABAANABEAAAAAAAAABAAOABEAAAAAAAAAAQAPABEAAAAAAAAAAQAQABEAAAAAAAAAAQARABEAAAAAAAAAAQASABEAAAAAAAAAAQATABEAAAAAAAAAAQAUABEAAAAAAAAAAQAVABEAAAAAAAAAAQAWABEAAAAAAAAAAQAXABEAAAAAAAAAAQAYABEAAAAAAAAAAQAZABEAAAAAAAAAAQAZAAoAAAAAAAAAAQAZAAsAAAAAAAAAAQAZAA0AAAAAAAAAAQAZAA4AAAAAAAAAAQAZAA8AAAAAAAAAAQAZABAAAAAAAAAAAQAKAAgAAAAAAAAAAQAKAAcAAAAAAAAAAQAKAAYAAAAAAAAAAQAKAAUAAAAAAAAAAQAKAAQAAAAAAAAAAQAKAAMAAAAAAAAAAQAKAAIAAAAAAAAAAQALAAIAAAAAAAAAAQAKAA8AAAAAAAAABFAKABAAAAAAAAAABFAKAA4AAAAAAAAABFAKAAwAAAAAAAAAAQAZAAwAAAAAAAAAAQAYAAsAAAAAAAAAAmAYAAMAAAAAAAAAAmAYAAQAAAAAAAAAAmAYAAUAAAAAAAAAAmAYAAYAAAAAAAAAAmAYAAcAAAAAAAAAAmAYAAgAAAAAAAAAAmAYAAkAAAAAAAAAAmAYAAoAAAAAAAAAAmAOABAAAAAAAAAABGAMAAMAAAAAAAAABFASAAMAAAAAAAAABGAQABAAAAAAAAAABFAQAAsAAAAAAAAABFAOAA0AAAAAAAAABGAYABAAAAAAAAAABgA=")
+
+[node name="pulse_walls" parent="." index="4" unique_id=373582771]
+position = Vector2(784, 532)
+
+[node name="pulse_wall_carrier" parent="pulse_walls" index="0" unique_id=1500950356 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-384, -128)
+input = NodePath("../pulse_wall_carrier14")
+
+[node name="pulse_wall_carrier2" parent="pulse_walls" index="1" unique_id=1677143908 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-352, -128)
+input = NodePath("../pulse_wall_carrier")
+
+[node name="pulse_wall_carrier3" parent="pulse_walls" index="2" unique_id=1329229280 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-320, -128)
+input = NodePath("../pulse_wall_carrier2")
+
+[node name="pulse_wall_carrier4" parent="pulse_walls" index="3" unique_id=1247846689 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-288, -128)
+input = NodePath("../pulse_wall_carrier3")
+
+[node name="pulse_wall_carrier5" parent="pulse_walls" index="4" unique_id=1893913828 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-256, -128)
+input = NodePath("../pulse_wall_carrier4")
+
+[node name="pulse_wall_carrier6" parent="pulse_walls" index="5" unique_id=1982773841 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-224, -128)
+input = NodePath("../pulse_wall_carrier5")
+
+[node name="pulse_wall_carrier7" parent="pulse_walls" index="6" unique_id=809885840 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-192, -128)
+input = NodePath("../pulse_wall_carrier6")
+
+[node name="pulse_wall_carrier8" parent="pulse_walls" index="7" unique_id=1316417336 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-160, -128)
+input = NodePath("../pulse_wall_carrier7")
+
+[node name="pulse_wall_carrier9" parent="pulse_walls" index="8" unique_id=1039708007 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-128, -128)
+input = NodePath("../pulse_wall_carrier8")
+
+[node name="pulse_wall_carrier10" parent="pulse_walls" index="9" unique_id=48513059 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-96, -128)
+input = NodePath("../pulse_wall_carrier9")
+
+[node name="pulse_wall_carrier11" parent="pulse_walls" index="10" unique_id=1520668935 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-64, -128)
+input = NodePath("../pulse_wall_carrier10")
+
+[node name="pulse_wall_carrier12" parent="pulse_walls" index="11" unique_id=502906178 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(-32, -128)
+input = NodePath("../pulse_wall_carrier11")
+
+[node name="pulse_wall_carrier13" parent="pulse_walls" index="12" unique_id=771786811 node_paths=PackedStringArray("input") instance=ExtResource("2_h2fyb")]
+position = Vector2(0, -128)
+input = NodePath("../pulse_wall_carrier12")
+
+[node name="pulse_wall_carrier14" parent="pulse_walls" index="13" unique_id=595030929 instance=ExtResource("3_3tdmx")]
+position = Vector2(-416, -128)
+wait_time = 1.5
+
+[connection signal="body_entered" from="level/spike" to="level/spike" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@70249" to="level/@Area2D@70249" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@70250" to="level/@Area2D@70250" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@70251" to="level/@Area2D@70251" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@70252" to="level/@Area2D@70252" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@70253" to="level/@Area2D@70253" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@70254" to="level/@Area2D@70254" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@70255" to="level/@Area2D@70255" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@70256" to="level/@Area2D@70256" method="_on_body_entered"]
+[connection signal="body_entered" from="level/finish" to="level/finish" method="_on_body_entered"]
+[connection signal="coin" from="player_character" to="." method="_on_player_character_coin"]
+[connection signal="death" from="player_character" to="." method="_on_player_character_death"]

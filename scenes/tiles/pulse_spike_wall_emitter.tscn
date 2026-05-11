@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dfwoupa6umd6h"]
+
+[ext_resource type="Script" uid="uid://o7o3apfwoi0i" path="res://scripts/pulse_spike_wall_emitter.gd" id="1_b68hw"]
+[ext_resource type="PackedScene" uid="uid://c8nnp8qj54odx" path="res://scenes/tiles/spike.tscn" id="2_fl2bt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yr34"]
+size = Vector2(32, 32)
+
+[node name="pulse_wall_carrier" type="StaticBody2D" unique_id=1500950356 groups=["wall"]]
+script = ExtResource("1_b68hw")
+
+[node name="polygons" type="Node2D" parent="." unique_id=1292585802]
+position = Vector2(-8, -8)
+scale = Vector2(0.5, 0.5)
+
+[node name="b1" type="Polygon2D" parent="polygons" unique_id=474417023]
+color = Color(0.11372549, 0.47058824, 0.42352942, 0)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="b1" type="Polygon2D" parent="polygons/b1" unique_id=1982168283]
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="spike" parent="polygons/b1" unique_id=1439200983 instance=ExtResource("2_fl2bt")]
+position = Vector2(0, -32)
+
+[node name="f1" type="Polygon2D" parent="polygons" unique_id=1467568072]
+position = Vector2(32, 0)
+color = Color(0.11372549, 0.47058824, 0.42352942, 0)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="f1" type="Polygon2D" parent="polygons/f1" unique_id=1208305585]
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="spike" parent="polygons/f1" unique_id=1128310258 instance=ExtResource("2_fl2bt")]
+position = Vector2(0, -32)
+
+[node name="f2" type="Polygon2D" parent="polygons" unique_id=158227755]
+position = Vector2(32, 32)
+color = Color(0.11372549, 0.47058824, 0.42352942, 0)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="f2" type="Polygon2D" parent="polygons/f2" unique_id=940508335]
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="spike" parent="polygons/f2" unique_id=1484362099 instance=ExtResource("2_fl2bt")]
+position = Vector2(0, 32)
+rotation = -3.1415925
+
+[node name="b2" type="Polygon2D" parent="polygons" unique_id=1899889420]
+position = Vector2(0, 32)
+color = Color(0.11372549, 0.47058824, 0.42352942, 0)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="b2" type="Polygon2D" parent="polygons/b2" unique_id=641608636]
+color = Color(0.11184334, 0.46991694, 0.42517605, 1)
+offset = Vector2(16, 16)
+polygon = PackedVector2Array(-32, -32, -32, 0, 0, 0)
+
+[node name="spike" parent="polygons/b2" unique_id=434961951 instance=ExtResource("2_fl2bt")]
+position = Vector2(0, 32)
+rotation = -3.1415925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=361028672]
+shape = SubResource("RectangleShape2D_7yr34")
+
+[node name="direction_indicator" type="Polygon2D" parent="." unique_id=543842243]
+position = Vector2(-2.295, -6.83)
+scale = Vector2(0.28, 0.225)
+color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+polygon = PackedVector2Array(0, 0, 32, 32, 0, 64)

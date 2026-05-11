@@ -1,0 +1,161 @@
+[gd_scene format=4 uid="uid://bfpit1hk2pfi5"]
+
+[ext_resource type="PackedScene" uid="uid://bq057n81cvw62" path="res://scenes/level_core/level_scene_preset.tscn" id="1_l2cce"]
+[ext_resource type="PackedScene" uid="uid://dod5ad5u0ixvj" path="res://scenes/tiles/pulse_wall_carrier.tscn" id="2_ccf5v"]
+[ext_resource type="PackedScene" uid="uid://c4thtwhmawpm8" path="res://scenes/tiles/pulse_wall_emitter.tscn" id="3_imsgm"]
+
+[node name="level_scene" unique_id=961452960 instance=ExtResource("1_l2cce")]
+level = 20
+
+[node name="level" parent="." index="2" unique_id=1438167536]
+tile_map_data = PackedByteArray("AAAMAAIAAAAAAAAAAQANAAIAAAAAAAAAAQAOAAIAAAAAAAAAAQAPAAIAAAAAAAAAAQAQAAIAAAAAAAAAAQARAAIAAAAAAAAAAQASAAIAAAAAAAAAAQATAAIAAAAAAAAAAQAUAAIAAAAAAAAAAQAVAAIAAAAAAAAAAQAWAAIAAAAAAAAAAQAXAAIAAAAAAAAAAQAYAAIAAAAAAAAAAQAZAAIAAAAAAAAAAQAZAAMAAAAAAAAAAQAZAAQAAAAAAAAAAQAZAAUAAAAAAAAAAQAZAAYAAAAAAAAAAQAZAAcAAAAAAAAAAQAZAAgAAAAAAAAAAQAZAAkAAAAAAAAAAQAKAAkAAAAAAAAAAQAKAAoAAAAAAAAAAQAKAAsAAAAAAAAAAQAKAA0AAAAAAAAAAQAKABEAAAAAAAAAAQALABEAAAAAAAAAAQAMABEAAAAAAAAAAQANABEAAAAAAAAAAQAOABEAAAAAAAAAAQAPABEAAAAAAAAAAQAQABEAAAAAAAAAAQARABEAAAAAAAAAAQASABEAAAAAAAAAAQATABEAAAAAAAAAAQAUABEAAAAAAAAAAQAVABEAAAAAAAAAAQAWABEAAAAAAAAAAQAXABEAAAAAAAAAAQAYABEAAAAAAAAAAQAZABEAAAAAAAAAAQAZAAoAAAAAAAAAAQAZAAsAAAAAAAAAAQAZAA0AAAAAAAAAAQAZAA4AAAAAAAAAAQAZAA8AAAAAAAAAAQAZABAAAAAAAAAAAQAKAAgAAAAAAAAAAQAKAAcAAAAAAAAAAQAKAAYAAAAAAAAAAQAKAAUAAAAAAAAAAQAKAAQAAAAAAAAAAQAKAAMAAAAAAAAAAQAKAAIAAAAAAAAAAQALAAIAAAAAAAAAAQAKAA8AAAAAAAAAAQAKABAAAAAAAAAAAQAKAA4AAAAAAAAAAQAKAAwAAAAAAAAAAQAZAAwAAAAAAAAAAQARAAMAAAAAAAAAAQARAAQAAAAAAAAAAQARAAUAAAAAAAAAAQARAAYAAAAAAAAAAQARAAcAAAAAAAAAAQARAAgAAAAAAAAAAQARAAkAAAAAAAAAAQARAAoAAAAAAAAAAQARAAsAAAAAAAAAAQARAAwAAAAAAAAAAQARAA0AAAAAAAAAAQARAA4AAAAAAAAAAQARAA8AAAAAAAAAAQASAAMAAAAAAAAAAQASAAQAAAAAAAAAAQASAAUAAAAAAAAAAQASAAYAAAAAAAAAAQASAAcAAAAAAAAAAQASAAgAAAAAAAAAAQASAAkAAAAAAAAAAQASAAoAAAAAAAAAAQASAAsAAAAAAAAAAQASAAwAAAAAAAAAAQASAA0AAAAAAAAAAQASAA4AAAAAAAAAAQASAA8AAAAAAAAAAQAYAAMAAAAAAAAAAQAXAAMAAAAAAAAABgALAAgAAAAAAAAABQALABAAAAAAAAAAAgAMABAAAAAAAAAAAgANABAAAAAAAAAAAgAOABAAAAAAAAAAAgAPABAAAAAAAAAAAgAQAAcAAAAAAAAABQALAAQAAAAAAAAAAwALAAUAAAAAAAAAAwALAAYAAAAAAAAAAwALAAcAAAAAAAAAAwALAAkAAAAAAAAAAwALAAoAAAAAAAAAAwALAAsAAAAAAAAAAwAMAAsAAAAAAAAAAwANAAsAAAAAAAAAAwAOAAsAAAAAAAAAAwAPAAsAAAAAAAAAAwAQAAsAAAAAAAAAAwAQAAgAAAAAAAAAAwAQAAkAAAAAAAAAAwAQAAoAAAAAAAAAAwAQAAMAAAAAAAAAAwAQAAQAAAAAAAAAAwAQAAUAAAAAAAAAAwAQAAYAAAAAAAAAAwAMAAMAAAAAAAAAAwANAAMAAAAAAAAAAwAOAAMAAAAAAAAAAwAPAAMAAAAAAAAAAwAMAAcAAAAAAAAAAwANAAcAAAAAAAAAAwAOAAcAAAAAAAAAAwAPAAcAAAAAAAAAAwAPAAgAAAAAAAAAAwAPAAkAAAAAAAAAAwAPAAoAAAAAAAAAAwAQAA0AAAAAAAAAAwAQAA4AAAAAAAAAAwAQAA8AAAAAAAAAAwAQABAAAAAAAAAAAwARABAAAAAAAAAAAwASABAAAAAAAAAAAwATABAAAAAAAAAAAwAUABAAAAAAAAAAAwAVABAAAAAAAAAAAwAWABAAAAAAAAAAAwAXABAAAAAAAAAAAwAYABAAAAAAAAAAAwAYAA0AAAAAAAAAAwAYAA4AAAAAAAAAAwAYAA8AAAAAAAAAAwAYAAQAAAAAAAAAAwAYAAUAAAAAAAAAAwAYAAYAAAAAAAAAAwAYAAcAAAAAAAAAAwAYAAgAAAAAAAAAAwAYAAkAAAAAAAAAAwAYAAoAAAAAAAAAAwAYAAsAAAAAAAAAAwATAAQAAAAAAAAAAwAUAAQAAAAAAAAAAwAVAAQAAAAAAAAAAwAWAAQAAAAAAAAAAwAXAAQAAAAAAAAAAwATAAMAAAAAAAAAAwAUAAMAAAAAAAAAAwAVAAMAAAAAAAAAAwAWAAMAAAAAAAAAAwATAAUAAAAAAAAAAwATAAYAAAAAAAAAAwATAAcAAAAAAAAAAwATAAgAAAAAAAAAAwATAAkAAAAAAAAAAwATAAoAAAAAAAAAAwATAAsAAAAAAAAAAwAUAAsAAAAAAAAAAwAVAAsAAAAAAAAAAwAWAAsAAAAAAAAAAwAXAAsAAAAAAAAAAwATAA0AAAAAAAAAAwAUAA0AAAAAAAAAAwAVAA0AAAAAAAAAAwAWAA0AAAAAAAAAAwAXAA0AAAAAAAAAAwATAA4AAAAAAAAAAwATAA8AAAAAAAAAAwA=")
+
+[node name="pulse_walls" parent="." index="4" unique_id=373582771]
+position = Vector2(784, 532)
+
+[node name="pulse_wall_carrier" parent="pulse_walls" index="0" unique_id=1500950356 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-384, -128)
+input = NodePath("../pulse_wall_carrier14")
+
+[node name="pulse_wall_carrier2" parent="pulse_walls" index="1" unique_id=1677143908 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-352, -128)
+input = NodePath("../pulse_wall_carrier")
+
+[node name="pulse_wall_carrier3" parent="pulse_walls" index="2" unique_id=1329229280 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-320, -128)
+input = NodePath("../pulse_wall_carrier2")
+
+[node name="pulse_wall_carrier4" parent="pulse_walls" index="3" unique_id=1247846689 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-288, -128)
+input = NodePath("../pulse_wall_carrier3")
+
+[node name="pulse_wall_carrier5" parent="pulse_walls" index="4" unique_id=1893913828 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-256, -128)
+input = NodePath("../pulse_wall_carrier4")
+
+[node name="pulse_wall_carrier6" parent="pulse_walls" index="5" unique_id=1982773841 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-224, -128)
+input = NodePath("../pulse_wall_carrier5")
+
+[node name="pulse_wall_carrier7" parent="pulse_walls" index="6" unique_id=809885840 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-192, -128)
+input = NodePath("../pulse_wall_carrier6")
+
+[node name="pulse_wall_carrier8" parent="pulse_walls" index="7" unique_id=1316417336 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-160, -128)
+input = NodePath("../pulse_wall_carrier7")
+
+[node name="pulse_wall_carrier9" parent="pulse_walls" index="8" unique_id=1039708007 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-128, -128)
+input = NodePath("../pulse_wall_carrier8")
+
+[node name="pulse_wall_carrier10" parent="pulse_walls" index="9" unique_id=48513059 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-96, -128)
+input = NodePath("../pulse_wall_carrier9")
+
+[node name="pulse_wall_carrier11" parent="pulse_walls" index="10" unique_id=1520668935 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-64, -128)
+input = NodePath("../pulse_wall_carrier10")
+
+[node name="pulse_wall_carrier12" parent="pulse_walls" index="11" unique_id=502906178 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(-32, -128)
+input = NodePath("../pulse_wall_carrier11")
+
+[node name="pulse_wall_carrier13" parent="pulse_walls" index="12" unique_id=771786811 node_paths=PackedStringArray("input") instance=ExtResource("2_ccf5v")]
+position = Vector2(0, -128)
+input = NodePath("../pulse_wall_carrier12")
+
+[node name="pulse_wall_carrier14" parent="pulse_walls" index="13" unique_id=595030929 instance=ExtResource("3_imsgm")]
+position = Vector2(-416, -128)
+wait_time = 0.5
+
+[connection signal="body_entered" from="level/finish" to="level/finish" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@75276" to="level/@Area2D@75276" method="_on_body_entered"]
+[connection signal="body_entered" from="level/spike" to="level/spike" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@75278" to="level/@Area2D@75278" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@75279" to="level/@Area2D@75279" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@75280" to="level/@Area2D@75280" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@75281" to="level/@Area2D@75281" method="_on_body_entered"]
+[connection signal="body_entered" from="level/toggle_wall" to="level/toggle_wall" method="_on_body_entered"]
+[connection signal="body_entered" from="level/coin" to="level/coin" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77493" to="level/@Area2D@77493" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77494" to="level/@Area2D@77494" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77495" to="level/@Area2D@77495" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77496" to="level/@Area2D@77496" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77497" to="level/@Area2D@77497" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77498" to="level/@Area2D@77498" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77499" to="level/@Area2D@77499" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77500" to="level/@Area2D@77500" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77501" to="level/@Area2D@77501" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77502" to="level/@Area2D@77502" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77503" to="level/@Area2D@77503" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77504" to="level/@Area2D@77504" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77505" to="level/@Area2D@77505" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77506" to="level/@Area2D@77506" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77507" to="level/@Area2D@77507" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77508" to="level/@Area2D@77508" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77509" to="level/@Area2D@77509" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77510" to="level/@Area2D@77510" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77511" to="level/@Area2D@77511" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77512" to="level/@Area2D@77512" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77513" to="level/@Area2D@77513" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77514" to="level/@Area2D@77514" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77515" to="level/@Area2D@77515" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77516" to="level/@Area2D@77516" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77517" to="level/@Area2D@77517" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77518" to="level/@Area2D@77518" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77519" to="level/@Area2D@77519" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77520" to="level/@Area2D@77520" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77521" to="level/@Area2D@77521" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77522" to="level/@Area2D@77522" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77523" to="level/@Area2D@77523" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77524" to="level/@Area2D@77524" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77525" to="level/@Area2D@77525" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77526" to="level/@Area2D@77526" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77527" to="level/@Area2D@77527" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77528" to="level/@Area2D@77528" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77529" to="level/@Area2D@77529" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77530" to="level/@Area2D@77530" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77531" to="level/@Area2D@77531" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77532" to="level/@Area2D@77532" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77533" to="level/@Area2D@77533" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77534" to="level/@Area2D@77534" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77535" to="level/@Area2D@77535" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77536" to="level/@Area2D@77536" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77537" to="level/@Area2D@77537" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77538" to="level/@Area2D@77538" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77539" to="level/@Area2D@77539" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77540" to="level/@Area2D@77540" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77541" to="level/@Area2D@77541" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77542" to="level/@Area2D@77542" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77543" to="level/@Area2D@77543" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77544" to="level/@Area2D@77544" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77545" to="level/@Area2D@77545" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77546" to="level/@Area2D@77546" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77547" to="level/@Area2D@77547" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77548" to="level/@Area2D@77548" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77549" to="level/@Area2D@77549" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77550" to="level/@Area2D@77550" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77551" to="level/@Area2D@77551" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77552" to="level/@Area2D@77552" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77553" to="level/@Area2D@77553" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77554" to="level/@Area2D@77554" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77555" to="level/@Area2D@77555" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77556" to="level/@Area2D@77556" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77557" to="level/@Area2D@77557" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77558" to="level/@Area2D@77558" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77559" to="level/@Area2D@77559" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77560" to="level/@Area2D@77560" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77561" to="level/@Area2D@77561" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77562" to="level/@Area2D@77562" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77563" to="level/@Area2D@77563" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77564" to="level/@Area2D@77564" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77565" to="level/@Area2D@77565" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77566" to="level/@Area2D@77566" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77567" to="level/@Area2D@77567" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77568" to="level/@Area2D@77568" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77569" to="level/@Area2D@77569" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77570" to="level/@Area2D@77570" method="_on_body_entered"]
+[connection signal="body_entered" from="level/@Area2D@77571" to="level/@Area2D@77571" method="_on_body_entered"]
+[connection signal="coin" from="player_character" to="." method="_on_player_character_coin"]
+[connection signal="death" from="player_character" to="." method="_on_player_character_death"]

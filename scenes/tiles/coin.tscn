@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1dm1lyb1q6wc" path="res://scripts/coin.gd" id="1_rwqht"]
 
-[node name="coin" type="Area2D" unique_id=1402560111]
+[node name="coin" type="Area2D" unique_id=1402560111 groups=["coin"]]
 script = ExtResource("1_rwqht")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1730275039]

@@ -17,6 +17,7 @@ func _physics_process(delta: float) -> void:
 	if state == "alive":
 		var collision = move_and_collide(custom_velocity)
 		if collision:
+			print(collision.get_collider().name)
 			if collision.get_collider().is_in_group("wall"):
 				%hitbox.scale = Vector2.ONE
 				custom_velocity = Vector2.ZERO
@@ -48,7 +49,6 @@ func _input(event: InputEvent) -> void:
 			update_velocity.emit(Vector2(-1, 0))
 func _on_death() -> void:
 	state = "dead"
-	print(custom_velocity)
 	$GPUParticles2D.process_material.gravity = Vector3(custom_velocity.x * -6, custom_velocity.y * -6, 0)
 	$GPUParticles2D.position = custom_velocity / speed * 16
 	$Polygon2D.visible = false
@@ -56,11 +56,7 @@ func _on_death() -> void:
 	$GPUParticles2D.emitting = true
 	await get_tree().create_timer(2).timeout
 	respawn.emit()
-	self.position = start_position
-	$Polygon2D.visible = true
-	custom_velocity = Vector2.ZERO
-	state = "alive"
-	%hitbox.scale = Vector2.ONE
+	
 func _on_finish() -> void:
 	state = "finished"
 	position = finish_position
@@ -68,3 +64,11 @@ func _ready() -> void:
 	start_position = position
 	if !safe_manager.settings["particles_enabled"]:
 		$GPUParticles2D.visible = false
+
+
+func _on_respawn() -> void:
+	self.position = start_position
+	$Polygon2D.visible = true
+	custom_velocity = Vector2.ZERO
+	state = "alive"
+	%hitbox.scale = Vector2.ONE

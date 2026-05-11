@@ -42,9 +42,9 @@ layer = -1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1325307697]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 64.0
 offset_top = 288.0
-offset_right = 1120.0
+offset_right = 1088.0
 offset_bottom = 384.0
 theme = ExtResource("4_27fpk")
 theme_override_constants/scrollbar_v_separation = 4

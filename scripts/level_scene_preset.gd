@@ -2,7 +2,7 @@ extends Node2D
 
 @export var level = 0
 var coins = 0
-
+var max_coins = 0
 
 
 func _ready() -> void:
@@ -11,13 +11,13 @@ func _ready() -> void:
 		$player_character.move.connect($background.input)
 	#await $level.changed
 	$level.update_internals()
-	print($level.get_children())
 	for i: Node in $level.get_children():
-		print(i.name)
 		if i.has_method("respawn"):
 			$player_character.respawn.connect(i.respawn)
 		if i.has_method("update_velocity"):
 			$player_character.update_velocity.connect(i.update_velocity)
+		if i.is_in_group("coin"):
+			max_coins += 1 
 func _process(delta: float) -> void:
 	if $player_character and $foreground:
 		$foreground.offset = ($player_character.position - Vector2(get_viewport().size) / 2) * 0.1
@@ -29,6 +29,8 @@ func _on_player_character_finish() -> void:
 		safe_manager.level_coins[level - 1] = coins
 	safe_manager.save_savefile()
 	await get_tree().create_timer(1).timeout
+	$win_menu.coins = coins
+	$win_menu.max_coins = max_coins
 	$win_menu.animation_open()
 
 func _on_win_menu_menu() -> void:
@@ -66,3 +68,13 @@ func _on_back_button_pressed() -> void:
 	audio_handler.break_toggled = false
 	ui_transition_handler.transition_continue.emit()
 	self.queue_free()
+
+
+func _on_win_menu_retry() -> void:
+	$win_menu.animation_close()
+	await $win_menu.animation_close_end
+	$player_character.respawn.emit()
+
+
+func _on_player_character_respawn() -> void:
+	coins = 0
