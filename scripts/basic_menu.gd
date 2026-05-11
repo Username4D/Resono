@@ -40,9 +40,9 @@ func animation_close():
 	if !open: return
 	animation_close_start.emit()
 	ongoing = true
-	var timer = get_tree().create_timer(2)
+	var timer = get_tree().create_timer(1)
 	while timer.time_left != 0:
-		%content.size.y = (ease(timer.time_left / 2, 0.1)) * 512
+		%content.size.y = (timer.time_left) * 512
 		await get_tree().process_frame
 	var arr = %bg_polygons.get_children()
 	arr.reverse()

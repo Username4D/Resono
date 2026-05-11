@@ -56,11 +56,7 @@ func _on_death() -> void:
 	$GPUParticles2D.emitting = true
 	await get_tree().create_timer(2).timeout
 	respawn.emit()
-	self.position = start_position
-	$Polygon2D.visible = true
-	custom_velocity = Vector2.ZERO
-	state = "alive"
-	%hitbox.scale = Vector2.ONE
+	
 func _on_finish() -> void:
 	state = "finished"
 	position = finish_position
@@ -68,3 +64,11 @@ func _ready() -> void:
 	start_position = position
 	if !safe_manager.settings["particles_enabled"]:
 		$GPUParticles2D.visible = false
+
+
+func _on_respawn() -> void:
+	self.position = start_position
+	$Polygon2D.visible = true
+	custom_velocity = Vector2.ZERO
+	state = "alive"
+	%hitbox.scale = Vector2.ONE
