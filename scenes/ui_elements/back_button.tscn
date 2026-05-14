@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="1_hllrc"]
 [ext_resource type="Script" uid="uid://bibnliywsu4u7" path="res://scripts/back_button.gd" id="1_sx032"]
 [ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_sx032"]
+[ext_resource type="PackedScene" uid="uid://c2eyni7gjx4j8" path="res://scenes/ui_elements/button_sfx_handler.tscn" id="4_bilj8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bilj8"]
 font = ExtResource("2_sx032")
@@ -20,6 +21,8 @@ offset_right = 232.0
 offset_bottom = 104.0
 theme = ExtResource("1_hllrc")
 theme_type_variation = &"FlatButton"
+
+[node name="button_sfx_handler" parent="Button" unique_id=1116743689 instance=ExtResource("4_bilj8")]
 
 [node name="Label" type="Label" parent="." unique_id=602555248]
 offset_left = 40.0

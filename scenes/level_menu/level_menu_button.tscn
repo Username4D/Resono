@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="1_mdkli"]
 [ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_nbjep"]
 [ext_resource type="Script" uid="uid://dxu3jjhv1vo3w" path="res://scripts/level_menu_button.gd" id="2_ngtly"]
+[ext_resource type="PackedScene" uid="uid://c2eyni7gjx4j8" path="res://scenes/ui_elements/button_sfx_handler.tscn" id="4_kclwx"]
 
 [sub_resource type="FontVariation" id="FontVariation_ngtly"]
 base_font = ExtResource("2_nbjep")
@@ -45,3 +46,5 @@ vertical_alignment = 1
 points = PackedVector2Array(64, 32, 128, 32)
 width = 4.0
 default_color = Color(0, 0.36492407, 0.31314182, 1)
+
+[node name="button_sfx_handler" parent="." unique_id=1116743689 instance=ExtResource("4_kclwx")]

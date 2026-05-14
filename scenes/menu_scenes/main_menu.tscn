@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="2_ftgjd"]
 [ext_resource type="PackedScene" uid="uid://rtd6ssqarhss" path="res://scenes/ui_elements/background.tscn" id="3_6cp6s"]
 [ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="4_ftgjd"]
+[ext_resource type="PackedScene" uid="uid://c2eyni7gjx4j8" path="res://scenes/ui_elements/button_sfx_handler.tscn" id="6_r76a3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hw0fn"]
 font = ExtResource("1_3ilp2")
@@ -74,6 +75,8 @@ label_settings = SubResource("LabelSettings_iyafn")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="button_sfx_handler" parent="levels_button" unique_id=1116743689 instance=ExtResource("6_r76a3")]
+
 [node name="settings_button" type="Button" parent="." unique_id=1674298581]
 unique_name_in_owner = true
 layout_mode = 0
@@ -103,6 +106,8 @@ label_settings = SubResource("LabelSettings_iyafn")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="button_sfx_handler" parent="settings_button" unique_id=933122363 instance=ExtResource("6_r76a3")]
+
 [node name="credits_button" type="Button" parent="." unique_id=433752990]
 unique_name_in_owner = true
 layout_mode = 0
@@ -131,6 +136,8 @@ text = "Credits"
 label_settings = SubResource("LabelSettings_iyafn")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="button_sfx_handler" parent="credits_button" unique_id=198512043 instance=ExtResource("6_r76a3")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1689656158]
 position = Vector2(576, 324)

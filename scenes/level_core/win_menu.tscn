@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://srg20da2vfpl" path="res://scenes/level_core/win_menu.gd" id="2_7v0cb"]
 [ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_jx1is"]
 [ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="3_ajxxn"]
+[ext_resource type="PackedScene" uid="uid://c2eyni7gjx4j8" path="res://scenes/ui_elements/button_sfx_handler.tscn" id="5_w6tda"]
 
 [sub_resource type="FontVariation" id="FontVariation_jx1is"]
 base_font = ExtResource("2_jx1is")
@@ -29,10 +30,7 @@ max_coins = 0
 [node name="click_protect" parent="." index="0" unique_id=686989595]
 custom_minimum_size = Vector2(1152, 648)
 
-[node name="content" parent="menu" parent_id_path=PackedInt32Array(2050496603) index="1" unique_id=1466627907]
-offset_bottom = 0.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="menu/content" index="1" unique_id=2039544416]
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="1" unique_id=2039544416]
 layout_mode = 0
 offset_top = 28.0
 offset_right = 512.0
@@ -58,7 +56,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 color = Color(0.62266326, 0.78247595, 0.7799469, 1)
 
-[node name="coins" type="Label" parent="menu/content" index="2" unique_id=570254041]
+[node name="coins" type="Label" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="2" unique_id=570254041]
 custom_minimum_size = Vector2(512, 64)
 layout_mode = 0
 offset_top = 156.0
@@ -69,7 +67,7 @@ label_settings = SubResource("LabelSettings_jhtc2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="menu_button" type="Button" parent="menu/content" index="3" unique_id=1529169029]
+[node name="menu_button" type="Button" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="3" unique_id=1529169029]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 64.0
@@ -98,7 +96,9 @@ label_settings = SubResource("LabelSettings_jhtc2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="retry_button" type="Button" parent="menu/content" index="4" unique_id=1586302778]
+[node name="button_sfx_handler" parent="menu/content/menu_button" index="3" unique_id=1116743689 instance=ExtResource("5_w6tda")]
+
+[node name="retry_button" type="Button" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="4" unique_id=1586302778]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 352.0
@@ -127,7 +127,9 @@ label_settings = SubResource("LabelSettings_jhtc2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="next_button" type="Button" parent="menu/content" index="5" unique_id=104343204]
+[node name="button_sfx_handler" parent="menu/content/retry_button" index="3" unique_id=1907173993 instance=ExtResource("5_w6tda")]
+
+[node name="next_button" type="Button" parent="menu/content" parent_id_path=PackedInt32Array(1466627907) index="5" unique_id=104343204]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 208.0
@@ -155,3 +157,5 @@ text = "Next"
 label_settings = SubResource("LabelSettings_jhtc2")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="button_sfx_handler" parent="menu/content/next_button" index="3" unique_id=1373869003 instance=ExtResource("5_w6tda")]

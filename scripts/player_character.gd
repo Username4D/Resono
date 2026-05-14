@@ -32,33 +32,39 @@ func _input(event: InputEvent) -> void:
 			%hitbox.scale = Vector2(0.5,1)
 			move.emit()
 			update_velocity.emit(Vector2(0, -1))
+			audio_handler.play_sfx("swipe", true, 1)
 		if event.is_action_pressed("ui_down"):
 			custom_velocity.y = speed
 			%hitbox.scale = Vector2(0.5,1)
 			move.emit()
 			update_velocity.emit(Vector2(0, 1))
+			audio_handler.play_sfx("swipe", true, 1)
 		if event.is_action_pressed("ui_right"):
 			custom_velocity.x = speed
 			%hitbox.scale = Vector2(1,0.5)
 			move.emit()
 			update_velocity.emit(Vector2(1,0))
+			audio_handler.play_sfx("swipe", true, 1)
 		if event.is_action_pressed("ui_left"):
 			custom_velocity.x = -speed
 			%hitbox.scale = Vector2(1,0.5)
 			move.emit()
 			update_velocity.emit(Vector2(-1, 0))
+			audio_handler.play_sfx("swipe", true, 1)
 func _on_death() -> void:
+	audio_handler.play_sfx("death", false, 1)
 	state = "dead"
 	$GPUParticles2D.process_material.gravity = Vector3(custom_velocity.x * -6, custom_velocity.y * -6, 0)
 	$GPUParticles2D.position = custom_velocity / speed * 16
 	$Polygon2D.visible = false
 	$trail.visible = false
 	$GPUParticles2D.emitting = true
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1).timeout
 	respawn.emit()
 	
 func _on_finish() -> void:
 	state = "finished"
+	audio_handler.play_sfx("fin", false, 0.5)
 	position = finish_position
 func _ready() -> void:
 	start_position = position

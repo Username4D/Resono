@@ -4,6 +4,7 @@ var collected = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and !collected:
+		audio_handler.play_sfx("coin", false, 0.2)
 		collected = true
 		body.coin.emit()
 		var time = get_tree().create_timer(0.5)

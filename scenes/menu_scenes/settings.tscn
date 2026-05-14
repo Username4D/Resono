@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://5uqtjamsxgyw" path="res://scenes/ui_elements/foreground.tscn" id="3_g3pud"]
 [ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="4_q3ecd"]
 [ext_resource type="Texture2D" uid="uid://bqnxf8dobvbek" path="res://resources/assets/check_svg.svg" id="5_00oib"]
+[ext_resource type="PackedScene" uid="uid://c2eyni7gjx4j8" path="res://scenes/ui_elements/button_sfx_handler.tscn" id="6_21aae"]
 [ext_resource type="PackedScene" uid="uid://c77x1pk5qy3gl" path="res://scenes/ui_elements/back_button.tscn" id="6_qiktq"]
 
 [sub_resource type="FontVariation" id="FontVariation_b2oo1"]
@@ -123,6 +124,8 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_gi2t1")
 max_value = 10.0
 value = 8.0
 
+[node name="button_sfx_handler" parent="HBoxContainer/sfx_volume/HSlider" unique_id=1116743689 instance=ExtResource("6_21aae")]
+
 [node name="music_volume" type="Control" parent="HBoxContainer" unique_id=2120549933]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -149,6 +152,8 @@ theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gi2t1")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_gi2t1")
 max_value = 10.0
 value = 8.0
+
+[node name="button_sfx_handler" parent="HBoxContainer/music_volume/HSlider" unique_id=490033615 instance=ExtResource("6_21aae")]
 
 [node name="Control" type="Control" parent="HBoxContainer" unique_id=739789081]
 custom_minimum_size = Vector2(0, 64)
@@ -177,6 +182,8 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_b76fu")
 theme_override_styles/focus = SubResource("StyleBoxFlat_b76fu")
 theme_override_icons/checked = ExtResource("5_00oib")
 theme_override_icons/unchecked = SubResource("MeshTexture_l6wpa")
+
+[node name="button_sfx_handler" parent="HBoxContainer/Control/CheckBox" unique_id=1231729645 instance=ExtResource("6_21aae")]
 
 [node name="back_button" parent="." unique_id=319162283 instance=ExtResource("6_qiktq")]
 

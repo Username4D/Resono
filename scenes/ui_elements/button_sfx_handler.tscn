@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c2eyni7gjx4j8"]
+
+[ext_resource type="Script" uid="uid://doepn1amofciw" path="res://scripts/button_sfx_handler.gd" id="1_l4a3c"]
+
+[node name="button_sfx_handler" type="Node" unique_id=1116743689]
+script = ExtResource("1_l4a3c")
