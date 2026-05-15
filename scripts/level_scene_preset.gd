@@ -20,7 +20,7 @@ func _ready() -> void:
 			max_coins += 1 
 func _process(delta: float) -> void:
 	if $player_character and $foreground:
-		$foreground.offset = ($player_character.position - Vector2(get_viewport().size) / 2) * 0.1
+		$foreground.offset = $foreground.offset.move_toward(($player_character.position - Vector2(get_viewport().size) / 2) * 0.1, delta * 600)
 
 func _on_player_character_finish() -> void:
 	if level >= safe_manager.unlocked_levels:
@@ -78,3 +78,8 @@ func _on_win_menu_retry() -> void:
 
 func _on_player_character_respawn() -> void:
 	coins = 0
+
+
+func _on_pause_button_pressed() -> void:
+	$pause_menu/pause_menu.pause.emit(self)
+	self.process_mode = Node.PROCESS_MODE_DISABLED

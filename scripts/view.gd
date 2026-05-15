@@ -2,6 +2,7 @@ extends Control
 
 
 func transition():
+	$click_protector.visible = true
 	for i in range(0, $transition/row.get_child_count() + $transition.get_child_count() - 1):
 		var trigger_objects = []
 		for n in range(0, i + 1 if i < $transition.get_child_count() else $transition.get_child_count()):
@@ -26,6 +27,7 @@ func transition():
 		for n in trigger_objects:
 			n.get_child(1).visible = false
 	ui_transition_handler.transition_end.emit()
+	$click_protector.visible = false
 
 func _ready() -> void:
 	for i in $transition.get_children():

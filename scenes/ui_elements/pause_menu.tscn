@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://barcvnwny5otl"]
+
+[ext_resource type="Script" uid="uid://ddhurspqsq450" path="res://scripts/pause_menu.gd" id="1_kukqi"]
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_5d2l8"]
+[ext_resource type="Theme" uid="uid://50oax5x65vx8" path="res://resources/basic_theme.tres" id="3_7l7mv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4r4p"]
+font = ExtResource("2_5d2l8")
+font_size = 54
+
+[node name="pause_menu" type="Control" unique_id=157860884]
+process_mode = 3
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kukqi")
+
+[node name="click_protection" type="ColorRect" parent="." unique_id=1878083209]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.34117648)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=852801961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer" unique_id=1965750087]
+custom_minimum_size = Vector2(512, 256)
+layout_mode = 2
+color = Color(0, 0.36492407, 0.31314182, 1)
+
+[node name="Polygon2D" type="Polygon2D" parent="CenterContainer/ColorRect" unique_id=2088631006]
+color = Color(1.2513996e-06, 0.4032619, 0.34759825, 1)
+polygon = PackedVector2Array(0, 256, 512, 0, 0, 0)
+
+[node name="Label" type="Label" parent="CenterContainer/ColorRect" unique_id=809743819]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 512.0
+offset_bottom = 112.0
+text = "Paused"
+label_settings = SubResource("LabelSettings_v4r4p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="actions" type="HBoxContainer" parent="CenterContainer/ColorRect" unique_id=971840541]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 128.0
+offset_right = 496.0
+offset_bottom = 192.0
+alignment = 1
+
+[node name="menu_button" type="Button" parent="CenterContainer/ColorRect/actions" unique_id=1653288178]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme = ExtResource("3_7l7mv")
+theme_override_fonts/font = ExtResource("2_5d2l8")
+theme_override_font_sizes/font_size = 21
+text = "Menu"
+
+[node name="seperator" type="ColorRect" parent="CenterContainer/ColorRect/actions" unique_id=997217068]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+
+[node name="continue_button" type="Button" parent="CenterContainer/ColorRect/actions" unique_id=501144193]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme = ExtResource("3_7l7mv")
+theme_override_fonts/font = ExtResource("2_5d2l8")
+theme_override_font_sizes/font_size = 21
+text = "Continue"
