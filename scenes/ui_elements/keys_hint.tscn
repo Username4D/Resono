@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://cj0mrua51su30"]
+
+[ext_resource type="Script" uid="uid://jr1xkw7uh1es" path="res://scripts/keys_hint.gd" id="1_k0cuc"]
+[ext_resource type="FontFile" uid="uid://bsun7ppdgb35g" path="res://resources/assets/PlayfairDisplay-VariableFont_wght.ttf" id="2_5e274"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0cuc"]
+bg_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.003921569, 0.32941177, 0.29411766, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_b5i71"]
+font = ExtResource("2_5e274")
+font_size = 29
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5e274"]
+bg_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.003921569, 0.32941177, 0.29411766, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5i71"]
+bg_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.003921569, 0.32941177, 0.29411766, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckkci"]
+bg_color = Color(0.62266326, 0.78247595, 0.7799469, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.003921569, 0.32941177, 0.29411766, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="keys_hint" type="Control" unique_id=1797686201]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1024.0
+offset_bottom = -516.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k0cuc")
+
+[node name="a" type="Panel" parent="." unique_id=78188060]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 128.0
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(32, 32)
+theme_override_styles/panel = SubResource("StyleBoxFlat_k0cuc")
+
+[node name="Label" type="Label" parent="a" unique_id=1314618134]
+self_modulate = Color(0.003921569, 0.32941177, 0.29411766, 1)
+layout_mode = 0
+offset_left = -3.5555568
+offset_top = -3.5555506
+offset_right = 66.55556
+offset_bottom = 68.555565
+text = "A"
+label_settings = SubResource("LabelSettings_b5i71")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="s" type="Panel" parent="." unique_id=1431150196]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(32, 32)
+theme_override_styles/panel = SubResource("StyleBoxFlat_5e274")
+
+[node name="Label" type="Label" parent="s" unique_id=1653580649]
+self_modulate = Color(0.003921569, 0.32941177, 0.29411766, 1)
+layout_mode = 0
+offset_left = -3.555554
+offset_top = -3.5555506
+offset_right = 66.55556
+offset_bottom = 68.555565
+text = "S"
+label_settings = SubResource("LabelSettings_b5i71")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="d" type="Panel" parent="." unique_id=784777777]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 128.0
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(32, 32)
+theme_override_styles/panel = SubResource("StyleBoxFlat_b5i71")
+
+[node name="Label" type="Label" parent="d" unique_id=1973726284]
+self_modulate = Color(0.003921569, 0.32941177, 0.29411766, 1)
+layout_mode = 0
+offset_left = -3.5555458
+offset_top = -3.5555506
+offset_right = 66.55557
+offset_bottom = 68.555565
+text = "D"
+label_settings = SubResource("LabelSettings_b5i71")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="w" type="Panel" parent="." unique_id=1440095575]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(32, 32)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ckkci")
+
+[node name="Label" type="Label" parent="w" unique_id=88568569]
+self_modulate = Color(0.003921569, 0.32941177, 0.29411766, 1)
+layout_mode = 0
+offset_left = -3.5555522
+offset_top = -3.5555565
+offset_right = 67.555565
+offset_bottom = 67.55556
+text = "W"
+label_settings = SubResource("LabelSettings_b5i71")
+horizontal_alignment = 1
+vertical_alignment = 1

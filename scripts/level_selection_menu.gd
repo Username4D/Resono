@@ -11,7 +11,7 @@ func _ready() -> void:
 		o.level_id = i + 1
 		if i >= unlocked_levels:
 			o.level_disabled = true
-		if i == unlocked_levels - 1:
+		if i == unlocked_levels - 1 or i == level_amount - 1:
 			o.hide_line = true
 		o.pressed.connect(func(): load_level(o.level_id))
 		%buttons.add_child(o)
